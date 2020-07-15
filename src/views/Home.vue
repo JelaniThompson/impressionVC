@@ -127,8 +127,7 @@ export default {
   }
   &__contentRow {
     display: flex;
-    justify-content: space-between;
-    border: 5px solid red;
+    justify-content: space-around;
   }
   &__circle {
     width: 118px;
