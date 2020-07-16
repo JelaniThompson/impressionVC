@@ -168,8 +168,10 @@ export default {
     align-content: flex-start;
     max-width: 373px;
     margin-top: -5%;
+    margin-left: 20px;
+    margin-right: 20px;
     width: 100%;
-    padding: 0 20px 0 20px;
+    // padding: 0 20px 0 20px;
   }
   &__circle {
     width: 118px;
@@ -192,7 +194,8 @@ export default {
     font-size: 18px;
     text-align: left;
     position: relative;
-    margin-top: 0;
+    margin: 0;
+    // width: 320px;
   }
   &__fintech-paragraph {
     width: 100%;
