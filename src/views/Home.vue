@@ -24,10 +24,42 @@
         <h1 class="home__investmentPolicyTitle">Investment Policy</h1>
         <div class="home__investPolicyNumberGroup">
           <div class="home__contentRow">
-            <div class="home__circle"></div>
-            <div class="home__circle"></div>
-            <div class="home__circle"></div>
-            <div class="home__circle"></div>
+            <div class="home__circle-container">
+              <div class="home__circle"/>
+                <h2 class="home__fintech-header home__circle-header">
+                  Fintech Specialists
+                </h2>
+                <p class="home__fintech-paragraph home__circle-paragraph">
+                  Our firm only backs fintech startups and has been doing so since 2013.
+                </p>
+            </div>
+            <div class="home__circle-container">
+              <div class="home__circle home__seed-circle"/>
+                <h2 class="home__seed-header home__circle-header">
+                  Late Seed and Early Series A
+                </h2>
+                <p class="home__seed-paragraph home__circle-paragraph">
+                  We back startups in their late seed / early series A rounds with initial investments ranging from $1-2.5M. At minimum, a startup must have a finished complete product for us to consider participating in a round
+                </p>
+            </div>
+            <div class="home__circle-container">
+              <div class="home__circle home__lead-circle"/>
+                <h2 class="home__seed-header home__circle-header">
+                  Lead Investors
+                </h2>
+                <p class="home__lead-paragraph home__circle-paragraph">
+                  We lead all of our initial investments with simple, founder friendly term sheets
+                </p>
+            </div>
+            <div class="home__circle-container">
+              <div class="home__circle home__active-circle"/>
+                <h2 class="home__active-header home__circle-header">
+                  Active Investors
+                </h2>
+                <p class="home__seed-paragraph home__circle-paragraph">
+                  Borrowing from our years of accumulated experience and our connections within financial services, we like to roll-up our sleeves and help our founders build excellent businesses.
+                </p>
+            </div>
           </div>
         </div>
       </div>
@@ -127,13 +159,44 @@ export default {
   }
   &__contentRow {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+  &__circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    max-width: 373px;
+    margin-top: -5%;
+    width: 100%;
+    padding: 0 20px 0 20px;
   }
   &__circle {
     width: 118px;
     height: 115px;
+    // flex-basis: 100%;
     border-radius: 100%;
     border: 5px solid #fff;
+  }
+  &__circle-header {
+    color: #fff;
+    line-height: 29px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 23px;
+    white-space: nowrap;
+  }
+  &__circle-paragraph {
+    color: #fff;
+    line-height: 22px;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+    margin-top: 0;
+  }
+  &__fintech-paragraph {
+    width: 100%;
+    max-width: 262px;
   }
 }
 </style>
