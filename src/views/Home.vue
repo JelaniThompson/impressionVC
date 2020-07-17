@@ -63,6 +63,17 @@
           </div>
         </div>
       </div>
+
+      <!-- Portfolio Section -->
+      <div class="home__portfolioContainer">
+        <h1 class="home__portfolioTitle">Portfolio</h1>
+        <div class="home__fundFilter">
+          <!-- Fund I default selected. Dynamically add and remove fundIsSelected class -->
+          <div class="home__fundItem home__fundI home__fundIsSelected">Fund I</div> 
+          <div class="home__fundItem home__fundII">Fund II</div>
+          <div class="home__fundItem home__fundIII">Fund III</div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -195,11 +206,56 @@ export default {
     text-align: left;
     position: relative;
     margin: 0;
-    // width: 320px;
   }
   &__fintech-paragraph {
     width: 100%;
     max-width: 262px;
+  }
+
+  &__portfolioContainer {
+    flex-wrap: wrap;
+    background-color: #fff;
+    min-height: 720px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+  &__portfolioTitle {
+    color: #000;
+    margin-top: 117px;
+    font-size: 38px;
+    width: 100%;
+  }
+  &__fundFilter {
+    display: inline-flex;
+    justify-content: space-between;
+    max-width: 499px;
+    width: 100%;
+    white-space: nowrap;
+    border-left: solid 1px white;
+  }
+
+  &__fundItem {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+  }
+
+  &__fundIsSelected {
+    color: #1965BD;
+    font-weight: 600;
+  }
+  &__fundI {
+    padding-right: 44px;
+    border-right: 1px solid black;
+  }
+  &__fundII {
+    padding-right: 44px;
+    padding-left: 42px;
+    border-right: 1px solid black;
+  }
+  &__fundIII {
+    padding-left: 42px;
   }
 }
 </style>
