@@ -73,11 +73,22 @@
           <div class="home__fundItem home__fundII">Fund II</div>
           <div class="home__fundItem home__fundIII">Fund III</div>
         </div>
+        <!-- <template v-if="isFetching == false"> -->
+        {{ info }}
+        <!-- </template> -->
       </div>
   </div>
 </template>
 
 <script>
+// const axios = require('axios');
+
+const contentful = require("contentful");
+let client = contentful.createClient({
+  space: "oodmiydgatbo",
+  accessToken: "HkkwCwWrfXiNy0ZYE3ggtBhEBLL_Kmo6BtqYwzarydg"
+});
+
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
 
@@ -85,8 +96,31 @@ export default {
   name: 'Home',
   components: {
     Header
+  },
+  
+  data () {
+    return {
+      info: null,
+      isFetching: true,
+    }
+  },
+      
+    beforeMount() {
+      this.getPortfolioCompany();
+    },
+
+    methods: {
+      getPortfolioCompany() {
+        console.log('Fetching');
+        client.getEntries().then(entries => {
+          entries.items.forEach(entry => {
+            console.log(entry);
+          });
+        });
+        this.isFetching = !this.isFetching;
+      }
+    },
   }
-}
 </script>
 
 <style lang="scss">
