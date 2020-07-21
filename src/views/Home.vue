@@ -73,10 +73,19 @@
           <div class="home__fundItem home__fundII">Fund II</div>
           <div class="home__fundItem home__fundIII">Fund III</div>
         </div>
-        <!-- <template v-if="isFetching == false"> -->
-        {{ info }}
-        <!-- </template> -->
+        <template v-if="isFetching == false">
+          <div class="home__portfolioImageContainer">
+            <img
+              v-for="(post, index) in portfolioArray"
+              :src="post.fields.logo.fields.file.url"
+              :key="post.fields.logo.fields.file.url + '_' + index"
+              class="home__portfolioImage"
+            />
+          </div>
+        </template>
       </div>
+
+      <!-- Slider section -->
   </div>
 </template>
 
@@ -102,25 +111,27 @@ export default {
     return {
       info: null,
       isFetching: true,
+      portfolioArray: []
     }
   },
       
-    beforeMount() {
-      this.getPortfolioCompany();
-    },
+  beforeMount() {
+    this.getPortfolioCompany();
+  },
 
-    methods: {
-      getPortfolioCompany() {
-        console.log('Fetching');
-        client.getEntries().then(entries => {
-          entries.items.forEach(entry => {
-            console.log(entry);
-          });
+  methods: {
+    getPortfolioCompany() {
+      console.log('Fetching');
+      client.getEntries().then(entries => {
+        entries.items.forEach(entry => {
+          this.portfolioArray.push(entry);
         });
-        this.isFetching = !this.isFetching;
-      }
-    },
-  }
+      });
+      this.isFetching = !this.isFetching;
+      console.log(this.portfolioArray);
+    }
+  },
+}
 </script>
 
 <style lang="scss">
@@ -290,6 +301,19 @@ export default {
   }
   &__fundIII {
     padding-left: 42px;
+  }
+  &__portfolioImageContainer {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  &__portfolioImage {
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 4px;
   }
 }
 </style>
