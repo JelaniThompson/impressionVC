@@ -82,10 +82,19 @@
               class="home__portfolioImage"
             />
           </div>
+         <div class="home__pitchButton">
+          Send Us Your Pitch Deck
+         </div>
         </template>
       </div>
 
       <!-- Slider section -->
+      <div class="home__sliderContainer">
+        <h1 class="home__testimonialsTitle">Testimonials</h1>
+        <template v-if="isFetching == false">
+          <!-- <div v-for="(post, index) in testimonialsArray"></div> -->
+        </template>
+      </div>
   </div>
 </template>
 
@@ -111,7 +120,8 @@ export default {
     return {
       info: null,
       isFetching: true,
-      portfolioArray: []
+      portfolioArray: [],
+      testimonialsArray: [],
     }
   },
       
@@ -122,13 +132,25 @@ export default {
   methods: {
     getPortfolioCompany() {
       console.log('Fetching');
+      // .filter(entry => entry.fields.logo
       client.getEntries().then(entries => {
         entries.items.forEach(entry => {
-          this.portfolioArray.push(entry);
+          if(entry.fields.logo) {
+            this.portfolioArray.push(entry);
+          }
         });
       });
       this.isFetching = !this.isFetching;
       console.log(this.portfolioArray);
+    },
+    getTestimonials() {
+      client.getEntries().then(entries => {
+        entries.items.forEach(entry => {
+          if (entry.fields.quote) {
+            this.testimonialsArray.push(entry);
+          }
+        });
+      })
     }
   },
 }
@@ -306,7 +328,7 @@ export default {
     display: flex;
     align-self: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 117px;
   }
   &__portfolioImage {
     width: 200px;
@@ -314,6 +336,29 @@ export default {
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 4px;
+  }
+  &__pitchButton {
+    align-content: center;
+    background-color: #1965BD;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding: 35px;
+    border-radius: 6px;
+    width: 19%;
+    margin: 117px auto 128px auto;
+  }
+  &__sliderContainer {
+    flex-wrap: wrap;
+    background-color: #000;
+    color: #fff;
+    min-height: 720px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+  &__testimonialsTitle {
+    margin-top: 117px;
   }
 }
 </style>
