@@ -93,6 +93,17 @@
         <h1 class="home__testimonialsTitle">Testimonials</h1>
         <template v-if="isFetching == false">
           <!-- <div v-for="(post, index) in testimonialsArray"></div> -->
+          <flickity ref="flickity" :options="flickityOptions">
+            <div v-for="(item, index) in testimonialsArray" :key="index" class="home__testimonialsSlider">
+              <div class="home__contentContainer">
+                <div class="home__textContainer">
+                  <div class="home__sliderQuote">{{ item.fields.quote }}</div>
+                  <div class="home__sliderTeam">{{ item.fields.name }}</div>
+                </div>
+                <img :src="item.fields.image.fields.file.url" alt="Impression Ventures Slider Image" class="home__sliderImage">
+              </div>
+            </div>
+          </flickity>
         </template>
       </div>
   </div>
@@ -100,7 +111,7 @@
 
 <script>
 // const axios = require('axios');
-
+import Flickity from 'vue-flickity';
 const contentful = require("contentful");
 let client = contentful.createClient({
   space: "oodmiydgatbo",
@@ -113,11 +124,19 @@ import Header from '@/components/Header.vue'
 export default {
   name: 'Home',
   components: {
-    Header
+    Header,
+    Flickity
   },
   
   data () {
     return {
+      flickityOptions: {
+        initialIndex: 3,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true 
+        // any options from Flickity can be used
+      },
       info: null,
       isFetching: true,
       portfolioArray: [],
@@ -127,12 +146,18 @@ export default {
       
   beforeMount() {
     this.getPortfolioCompany();
+    this.getTestimonials();
   },
 
   methods: {
+    next() {
+      this.$refs.flickity.next();
+    },
+    previous() {
+      this.$refs.flickity.previous();
+    },
     getPortfolioCompany() {
       console.log('Fetching');
-      // .filter(entry => entry.fields.logo
       client.getEntries().then(entries => {
         entries.items.forEach(entry => {
           if(entry.fields.logo) {
@@ -151,6 +176,8 @@ export default {
           }
         });
       })
+      console.log(this.testimonialsArray);
+      // this.posts.fields.image and .name and .quoteIx
     }
   },
 }
@@ -355,10 +382,41 @@ export default {
     min-height: 720px;
     width: 100%;
     position: relative;
-    justify-content: center;
+    // justify-content: center;
+  }
+  &__contentContainer {
+    display: inline-flex;
   }
   &__testimonialsTitle {
     margin-top: 117px;
+  }
+  &__sliderQuote {
+    text-align: left;
+    // max-width: 70%;
+    max-width: 643.78px;
+    font-size: 32px;
+    position: relative;
+  }
+  &__sliderImage {
+    justify-self: flex-end;
+    right: 0;
+    position: relative;
+    margin-left: 88.24px;
+    border-radius: 100%;
+  }
+  &__textContainer {
+    // margin-right: 88.24px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  &__sliderTeam {
+    align-self: flex-start;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  &__testimonialsSlider {
+    margin-top: 0.5%;
   }
 }
 </style>
