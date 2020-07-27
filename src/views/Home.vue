@@ -106,6 +106,24 @@
           </flickity>
         </template>
       </div>
+
+      <!-- News Section -->
+      <div class="home__newsContainer">
+        <h1 class="home__newsTitle">News</h1>
+        <div v-for="(item, index) in newsArray" :key="index" class="home__newsSection">
+          <div class="home__newsContainer">
+            <div class="home__textContainer">
+              <div class="home__newsItemContainer">
+                <div class="home__storyLink">
+                  <h3 class="home__newsDate">{{ item.fields.date }}</h3>
+                  <h1 class="home__newsStoryTitle">{{ item.fields.title }}</h1>
+                  <p class="home__readMore">Read More</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -141,12 +159,14 @@ export default {
       isFetching: true,
       portfolioArray: [],
       testimonialsArray: [],
+      newsArray: [],
     }
   },
       
   beforeMount() {
     this.getPortfolioCompany();
     this.getTestimonials();
+    this.getNews();
   },
 
   methods: {
@@ -178,6 +198,16 @@ export default {
       })
       console.log(this.testimonialsArray);
       // this.posts.fields.image and .name and .quoteIx
+    },
+    getNews() {
+      client.getEntries().then(entries => {
+        entries.items.forEach(entry => {
+          if (entry.fields.date) {
+            this.newsArray.push(entry);
+          }
+        });
+      });
+      console.log(this.newsArray);
     }
   },
 }
@@ -417,6 +447,52 @@ export default {
   }
   &__testimonialsSlider {
     margin-top: 0.5%;
+  }
+  &__newsContainer {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color: #fff;
+    color: #000;
+    min-height: 720px;
+    width: 100%;
+    position: relative;
+  }
+  &__newsTitle {
+    justify-self: center;
+    margin: 117px auto 0px auto;
+    flex-direction: row;
+  }
+  &__newsStoryTitle {
+    width: 50%;
+    text-align: left;
+    font-weight: 500;
+  }
+  &__newsItemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 103.01px;
+  }
+  &__storyLink {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-direction: column;
+    margin-top: -30%;
+    // max-width: 756px;
+    // max-width: 51%;
+  }
+  &__readMore {
+    align-self: flex-start;
+    color: #1965BD;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  &__newsDate {
+    align-self: flex-start;
+    color: #1965BD;
   }
 }
 </style>
