@@ -140,8 +140,10 @@
           <img src="@/assets/images/ecosystem/500startups.jpg" alt="500 Startups Logo" class="networkImageItem">
         </div>
       </div>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.157302335472!2d-79.4017364845009!3d43.70727995695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b333cd1040c05%3A0xc42640fdd25816c1!2sImpression%20Ventures!5e0!3m2!1sen!2sca!4v1595959831225!5m2!1sen!2sca" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="home__footerContainer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.157302335472!2d-79.4017364845009!3d43.70727995695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b333cd1040c05%3A0xc42640fdd25816c1!2sImpression%20Ventures!5e0!3m2!1sen!2sca!4v1595959831225!5m2!1sen!2sca" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <Footer/>
+      </div>
   </div>
 </template>
 
@@ -155,13 +157,15 @@ let client = contentful.createClient({
 });
 
 // @ is an alias to /src
-import Header from '@/components/Header.vue'
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'Home',
   components: {
     Header,
-    Flickity
+    Flickity,
+    Footer
   },
   
   data () {
@@ -545,6 +549,12 @@ export default {
   &__networkImageContainer > img {
     width: 23%;
     padding: 5%;
+  }
+  &__footerContainer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
