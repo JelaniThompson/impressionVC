@@ -125,6 +125,21 @@
           </div>
         </div>
       </div>
+
+      <div class="home__networkContainer">
+        <h1 class="home__networkTitle">
+          Our Ecosystem / Network
+        </h1>
+        <div class="home__networkImageContainer">
+          <img src="@/assets/images/ecosystem/package-lock.png" alt="Holt Accelerator Logo" class="networkImageItem">
+          <img src="@/assets/images/ecosystem/creative-destruction-lab.png" alt="Creative Destruction Lab Logo" class="networkImageItem">
+          <img src="@/assets/images/ecosystem/acceleprise.png" alt="Acceleprise Logo" class="networkImageItem">
+          <img src="@/assets/images/ecosystem/nexcubed.jpeg" alt="Nex Cubed Logo" class="networkImageItem">
+          <img src="@/assets/images/ecosystem/techstars.jpg" alt="Techstars Logo" class="networkImageItem">
+          <img src="@/assets/images/ecosystem/dmz.png" alt="Ryerson DMZ Logo" class="networkImageItem">
+          <img src="@/assets/images/ecosystem/500startups.jpg" alt="500 Startups Logo" class="networkImageItem">
+        </div>
+      </div>
   </div>
 </template>
 
@@ -307,12 +322,10 @@ export default {
     margin-left: 20px;
     margin-right: 20px;
     width: 100%;
-    // padding: 0 20px 0 20px;
   }
   &__circle {
     width: 118px;
     height: 115px;
-    // flex-basis: 100%;
     border-radius: 100%;
     border: 5px solid #fff;
   }
@@ -518,6 +531,18 @@ export default {
     margin-top: -10%;
     margin-bottom: 1.5%;
     margin-left: 90%;
+  }
+  &__networkContainer {
+    flex-wrap: wrap;
+    background-color: #fff;
+    min-height: 720px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+  }
+  &__networkImageContainer > img {
+    width: 23%;
+    padding: 5%;
   }
 }
 </style>
