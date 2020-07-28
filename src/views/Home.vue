@@ -110,15 +110,16 @@
       <!-- News Section -->
       <div class="home__newsContainer">
         <h1 class="home__newsTitle">News</h1>
+        <h1 class="home__featuredTitle">
+          Featured
+        </h1>
         <div v-for="(item, index) in newsArray" :key="index" class="home__newsSection">
           <div class="home__newsContainer">
-            <div class="home__textContainer">
-              <div class="home__newsItemContainer">
-                <div class="home__storyLink">
-                  <h3 class="home__newsDate">{{ item.fields.date }}</h3>
-                  <h1 class="home__newsStoryTitle">{{ item.fields.title }}</h1>
-                  <p class="home__readMore">Read More</p>
-                </div>
+            <div class="home__newsItemContainer">
+              <div class="home__storyLink">
+                <h3 class="home__newsDate">{{ item.fields.date }}</h3>
+                <h1 class="home__newsStoryTitle">{{ item.fields.title }}</h1>
+                <p class="home__readMore">Read More<img class="home__rightArrow" src="../assets/images/arrow-right.png" alt="Right Arrow"/></p>
               </div>
             </div>
           </div>
@@ -422,7 +423,6 @@ export default {
   }
   &__sliderQuote {
     text-align: left;
-    // max-width: 70%;
     max-width: 643.78px;
     font-size: 32px;
     position: relative;
@@ -435,8 +435,6 @@ export default {
     border-radius: 100%;
   }
   &__textContainer {
-    // margin-right: 88.24px;
-    flex-wrap: wrap;
     flex-direction: column;
   }
   &__sliderTeam {
@@ -454,7 +452,7 @@ export default {
     flex-wrap: wrap;
     background-color: #fff;
     color: #000;
-    min-height: 720px;
+    min-height: 300px;
     width: 100%;
     position: relative;
   }
@@ -463,11 +461,21 @@ export default {
     margin: 117px auto 0px auto;
     flex-direction: row;
   }
+  &__featuredTitle {
+    color: #1965BD;
+    margin-top: 175px;
+    margin-left: 123px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+  }
   &__newsStoryTitle {
     width: 50%;
     text-align: left;
     font-weight: 500;
+    margin-top: -0.2%;
   }
+
   &__newsItemContainer {
     display: flex;
     flex-direction: column;
@@ -475,24 +483,41 @@ export default {
     align-items: flex-end;
     margin-right: 103.01px;
   }
+
   &__storyLink {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: column;
     margin-top: -30%;
-    // max-width: 756px;
-    // max-width: 51%;
+    margin-bottom: 3%;
   }
+
   &__readMore {
     align-self: flex-start;
+    width: 50%;
+    text-align: left;
     color: #1965BD;
     font-weight: 500;
     font-size: 18px;
+    border-bottom: 1px solid #000;
+    margin-top: -0.5%;
   }
+
   &__newsDate {
     align-self: flex-start;
     color: #1965BD;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__rightArrow {
+    max-width: 38px;
+    max-height: 38px;
+    // align-self: flex-end;
+    margin-top: -10%;
+    margin-bottom: 1.5%;
+    margin-left: 90%;
   }
 }
 </style>
