@@ -14,6 +14,7 @@
                 </div>
             </div>
         </div>
+
         <div class="footer__pageLinks">
             <ul>
                 <li>Portfolio</li>
@@ -26,7 +27,17 @@
                     </div>
                 </li>
             </ul>
+            <div class="footer__bottomRow">
+                <div class="footer__socialButtonRow">
+                    <img src="@/assets/images/email-icon.png" alt="Impression Ventures Email" class="footer__email">
+                    <img src="@/assets/images/twitter-icon.png" alt="Impression Ventures Twitter" class="footer__twitter">
+                    <img src="@/assets/images/medium-icon.png" alt="Impression Ventures Blog" class="footer__medium">
+                </div>
+            </div>
         </div>
+                        <div class="footer__copyright">
+                    © Copyright 2020 Impression Ventures, all rights reserved.
+                </div>
     </div>
 </template>
 
@@ -40,6 +51,7 @@ export default {
 .footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     // font-family: 'Montserrat', sans-serif;
     max-height: 185px;
     height: 100%;
@@ -96,6 +108,29 @@ export default {
         padding: 18px;
         border-radius: 4px;
         font-weight: 600;
+    }
+    &__socialButtonRow {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 28px;
+    }
+    &__socialButtonRow > img {
+        max-width: 30px;
+        max-height: 30px;
+        object-fit: contain;
+    }
+    &__twitter {
+        margin: 0 28px 0 28px;  
+    }
+    &__bottomRow {
+        color: #fff;
+    }
+    &__copyright {
+        position: absolute;
+        justify-self: center;
+        bottom: 0;
+        margin-bottom: 22px;
+        color: #fff;
     }
 }
 </style>
