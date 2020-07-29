@@ -549,6 +549,7 @@ export default {
   &__networkImageContainer > img {
     width: 23%;
     padding: 5%;
+    // border-radius: 20%;
   }
   &__footerContainer {
     margin: 0;

@@ -1,5 +1,33 @@
 <template>
-    <div class="footer"></div>
+    <div class="footer">
+        <div class="footer__addressHomeContainer">
+            <div class="footer_address">
+                <div class="footer__addressText">
+                    <img class="footer__addressIcon" src="@/assets/images/location-icon.png" alt="Impression Ventures Address Icon">
+                    2300 Yonge St, PO Box 2398<br/> Toronto, ON M4P 1E4
+                </div>
+            </div>
+            <div class="footer__phone">
+                <div class="footer__phoneText">
+                    <img src="@/assets/images/phone-icon.png" alt="Impression Ventures Phone Number" class="footer__phoneIcon">
+                    (647) 725-3355
+                </div>
+            </div>
+        </div>
+        <div class="footer__pageLinks">
+            <ul>
+                <li>Portfolio</li>
+                <li>Team</li>
+                <li>Contact</li>
+                <li>Press Kit</li>
+                <li>
+                    <div class="footer__pitchButton">
+                        Send Us Your Pitch Deck
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -18,5 +46,56 @@ export default {
     width: 100vw;
     background-color: #1965BD;
     position: relative;
+    &__addressHomeContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    &__address {
+        display: inline-flex;
+        flex-wrap: nowrap;
+    }
+    &__addressIcon {
+        margin-left: 40px;
+        margin-right: 14px;
+    }
+    &__addressText {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-align: left;
+    }
+    &__phoneText {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-align: left;
+        margin-top: 8px;
+    }
+    &__phoneIcon {
+        margin-left: 40px;
+        margin-right: 14px;
+    }
+    &__pageLinks {
+        margin-left: 28%;
+        margin-top: 20px;
+        align-self: flex-start;
+        flex-wrap: nowrap;
+    }
+    &__pageLinks > ul {
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        list-style: none;
+    }
+    &__pageLinks > ul > li {
+        display: inline-block;
+        margin: 0 20px 0 20px;
+    }
+    &__pitchButton {
+        background-color: #000;
+        padding: 18px;
+        border-radius: 4px;
+        font-weight: 600;
+    }
 }
 </style>
