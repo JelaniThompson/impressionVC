@@ -35,9 +35,9 @@
                 </div>
             </div>
         </div>
-                        <div class="footer__copyright">
-                    © Copyright 2020 Impression Ventures, all rights reserved.
-                </div>
+        <div class="footer__copyright">
+            © Copyright 2020 Impression Ventures, all rights reserved.
+        </div>
     </div>
 </template>
 
@@ -111,13 +111,17 @@ export default {
     }
     &__socialButtonRow {
         display: flex;
-        justify-content: flex-end;
         margin-right: 28px;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 22px;
+        position: absolute;
     }
     &__socialButtonRow > img {
         max-width: 30px;
         max-height: 30px;
         object-fit: contain;
+        bottom: 0;
     }
     &__twitter {
         margin: 0 28px 0 28px;  
