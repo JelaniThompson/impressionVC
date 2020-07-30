@@ -2,21 +2,28 @@
   <div class="home">
     <Header />
       <div class="home__textContainer">
-        <img class="home__heroImage" src="../assets/images/TorontoBlue.png">
-        <p class="home__text">We're a venture firm that invests in game-changing Fintech companies</p>
+        <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
+        <p class="home__text">We invest in game-changing FinTech companies across North America</p>
       </div>
 
       <!-- Black Text Box -->
       <div class="home__blackTextBlock">
         <div class="home__blackTextBlockTextContainer">
-          <p class="home__blackTextBlockTitle">With you every step of the way</p>
-          <p class="home__blackTextBlockParagraph">This is about you, the founders, not us. We know, we’re tech startup founders ourselves. There is no better type of partner. We only invest in Fintech. We write cheques leading the late-seed / early Series A round. Focus is a necessary prerequisite for success. We lean in and get our hands dirty when and where you want us to. We don’t tell you what to do, we tell you what we would do.</p>
+          <p class="home__blackTextBlockTitle">With You Each Step of the Way</p>
+          <p class="home__blackTextBlockParagraph">This is about you - <b>the founders</b>. We lean in and get our hands dirty when and where you want us.</p>
         </div>
       </div>
       
       <!-- Trudeau Image -->
-      <div class="home__trudeauWealthsimple">
-        <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau at Wealthsimple" class="home__trudeauWealthSimpleImage">
+      <div class="home__carousel">
+        <carousel :autoplay="true" :navigationEnabled="true">
+          <slide>
+            <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau at Wealthsimple" class="home__trudeauWealthSimpleImage">
+          </slide>
+          <slide>
+            <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau" class="trudeauImage">
+          </slide>
+        </carousel>
       </div>
 
       <!-- Investment Policy -->
@@ -93,7 +100,6 @@
         <h1 class="home__testimonialsTitle">Testimonials</h1>
         <template v-if="isFetching == false">
           <!-- <div v-for="(post, index) in testimonialsArray"></div> -->
-          <flickity ref="flickity" :options="flickityOptions">
             <div v-for="(item, index) in testimonialsArray" :key="index" class="home__testimonialsSlider">
               <div class="home__contentContainer">
                 <div class="home__textContainer">
@@ -103,7 +109,6 @@
                 <img :src="item.fields.image.fields.file.url" alt="Impression Ventures Slider Image" class="home__sliderImage">
               </div>
             </div>
-          </flickity>
         </template>
       </div>
 
@@ -148,8 +153,8 @@
 </template>
 
 <script>
-// const axios = require('axios');
-import Flickity from 'vue-flickity';
+import { Carousel, Slide } from 'vue-carousel';
+
 const contentful = require("contentful");
 let client = contentful.createClient({
   space: "oodmiydgatbo",
@@ -164,7 +169,8 @@ export default {
   name: 'Home',
   components: {
     Header,
-    Flickity,
+    Carousel,
+    Slide,
     Footer
   },
   
@@ -251,7 +257,7 @@ export default {
   &__text {
     position: absolute;
     color: #fff;
-    max-width: 1009px;
+    max-width: 1071px;
     width: 100%;
     font-family: 'Montserrat';
     font-weight: bold;
@@ -289,9 +295,19 @@ export default {
     font-size: 24px;
     line-height: 29px;
   }
-  &__trudeauWealthsimple {
+  &__carousel {
     width: 50%;
     max-height: 720px;
+  }
+  &__slide {
+    position: relative;
+    width: 50%;
+    background: #42b983;
+    color: #fff;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+    min-height: 100px;
   }
   &__investmentPolicyContainer {
     display: flex;
