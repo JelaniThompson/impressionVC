@@ -3,11 +3,12 @@ import App from './App.vue'
 import router from './router'
 
 import VuePageTransition from 'vue-page-transition';
-import VueCarousel from 'vue-carousel';
+import VueAgile from 'vue-agile';
+
 
 
 Vue.use(VuePageTransition);
-Vue.use(VueCarousel); // This will make <carousel> and <slide> available to all components within your Vue app
+Vue.use(VueAgile);
 
 Vue.config.productionTip = false
 

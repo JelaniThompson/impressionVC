@@ -16,14 +16,14 @@
       
       <!-- Trudeau Image -->
       <div class="home__carousel">
-        <carousel :autoplay="true" :navigationEnabled="true">
-          <slide>
+        <agile :nav-buttons="false" :autoplay-speed="5000" :speed="2500">
+          <div class="slide">
             <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau at Wealthsimple" class="home__trudeauWealthSimpleImage">
-          </slide>
-          <slide>
-            <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau" class="trudeauImage">
-          </slide>
-        </carousel>
+          </div>
+          <div class="slide">
+            <img src="https://pbs.twimg.com/media/C-xV09gW0AAIj3X.jpg" alt="Sensibill Team" class="sensibill">
+          </div>
+        </agile>
       </div>
 
       <!-- Investment Policy -->
@@ -153,7 +153,7 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel';
+import { VueAgile } from 'vue-agile';
 
 const contentful = require("contentful");
 let client = contentful.createClient({
@@ -169,8 +169,7 @@ export default {
   name: 'Home',
   components: {
     Header,
-    Carousel,
-    Slide,
+    agile: VueAgile,
     Footer
   },
   
