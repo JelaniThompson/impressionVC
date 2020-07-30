@@ -16,7 +16,7 @@
       
       <!-- Trudeau Image -->
       <div class="home__carousel">
-        <agile :autoplay-speed="5000" :speed="3000" autoplay>
+        <agile :autoplay-speed="5000" :speed="3000" fade pause-on-hover autoplay>
           <div class="slide">
             <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau at Wealthsimple" class="home__trudeauWealthSimpleImage">
           </div>
