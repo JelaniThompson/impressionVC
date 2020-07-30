@@ -572,5 +572,8 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  .agile__slides {
+    align-items: flex-start;
+  }
 }
 </style>
