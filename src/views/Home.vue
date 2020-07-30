@@ -32,34 +32,44 @@
         <div class="home__investPolicyNumberGroup">
           <div class="home__contentRow">
             <div class="home__circle-container">
-              <div class="home__circle"/>
+              <div class="home__circle">
+                <img src="@/assets/images/dollar.png" alt="circle dollar" class="home__circleIcon">
+              </div>
                 <h2 class="home__fintech-header home__circle-header">
-                  Fintech Specialists
+                  FinTech Specialist
                 </h2>
                 <p class="home__fintech-paragraph home__circle-paragraph">
                   Our firm only backs fintech startups and has been doing so since 2013.
                 </p>
             </div>
             <div class="home__circle-container">
-              <div class="home__circle home__seed-circle"/>
+              <div class="home__circle home__seed-circle">
+                <img src="@/assets/images/bar.png" alt="circle seed" class="home__circleIcon">
+              </div>
                 <h2 class="home__seed-header home__circle-header">
                   Late Seed and Early Series A
                 </h2>
                 <p class="home__seed-paragraph home__circle-paragraph">
-                  We back startups in their late seed / early series A rounds with initial investments ranging from $1-2.5M. At minimum, a startup must have a finished complete product for us to consider participating in a round
+                  We invest in late Seed and early Series A rounds. Our initial investments range from $1M-$2M into $2M+ rounds. We support high-growth startups that must demonstrate a complete product for us to participate in the round.
                 </p>
             </div>
             <div class="home__circle-container">
-              <div class="home__circle home__lead-circle"/>
-                <h2 class="home__seed-header home__circle-header">
+              <div class="home__circle home__lead-circle">
+                <img src="@/assets/images/person.png" alt="circle lead" class="home__circleIcon">
+              </div>
+              <!-- <div class="home__titleParaContainer"> -->
+               <h2 class="home__seed-header home__circle-header">
                   Lead Investors
                 </h2>
                 <p class="home__lead-paragraph home__circle-paragraph">
-                  We lead all of our initial investments with simple, founder friendly term sheets
+                  We lead (or co-lead) our initial investments with simple, founder-friendly term sheets. We want to position our portfolio companies for successful future growth without complicated strings attached.
                 </p>
+              <!-- </div> -->
             </div>
             <div class="home__circle-container">
-              <div class="home__circle home__active-circle"/>
+              <div class="home__circle home__active-circle">
+                <img src="@/assets/images/active.png" alt="circle active" class="home__circleIcon">
+              </div>
                 <h2 class="home__active-header home__circle-header">
                   Active Investors
                 </h2>
@@ -317,6 +327,7 @@ export default {
     position: relative;
     justify-content: center;
   }
+
   &__investmentPolicyTitle {
     color: #fff;
     margin-top: 117px;
@@ -345,9 +356,12 @@ export default {
     width: 100%;
   }
   &__circle {
+    display: flex;
     width: 118px;
     height: 115px;
     border-radius: 100%;
+    justify-content: center;
+    align-items: center;
     border: 5px solid #fff;
   }
   &__circle-header {
