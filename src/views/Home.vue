@@ -432,6 +432,7 @@ export default {
   }
   &__portfolioImageContainer {
     display: flex;
+    flex-wrap: wrap;
     align-self: center;
     justify-content: center;
     margin-top: 117px;
