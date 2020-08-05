@@ -5,9 +5,8 @@
         </div>
         <div class="header__menu">
             <ul>
-                <li>Portfolio</li>
-                <li>Team</li>
-                <li>Contact</li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="header__pitchButton">

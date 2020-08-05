@@ -17,10 +17,9 @@
 
         <div class="footer__pageLinks">
             <ul>
-                <li>Portfolio</li>
-                <li>Team</li>
-                <li>Contact</li>
-                <li><a class="footer__pressLink" href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
+                <li><a class="footer__footerLink" href="/team">Team</a></li>
+                <li><a class="footer__footerLink" href="/contact">Contact</a></li>
+                <li><a class="footer__footerLink" href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="footer__pitchButton">
                         Send Us Your Pitch Deck
@@ -138,7 +137,7 @@ export default {
         margin-bottom: 22px;
         color: #fff;
     }
-    &__pressLink {
+    &__footerLink {
         text-decoration: none;
         color: white;
     }
