@@ -110,12 +110,12 @@ export default {
         font-weight: 600;
     }
     &__socialButtonRow {
-        display: flex;
-        margin-right: 28px;
-        right: 0;
-        bottom: 0;
+        display: inline-flex;
+        justify-items: flex-end;
+        margin-top: 20px;
         margin-bottom: 22px;
-        position: absolute;
+        margin-right: 28px;
+        position: relative;
     }
     &__socialButtonRow > img {
         max-width: 30px;
@@ -128,6 +128,8 @@ export default {
     }
     &__bottomRow {
         color: #fff;
+        display: flex;
+        justify-content: flex-end;
     }
     &__copyright {
         position: absolute;

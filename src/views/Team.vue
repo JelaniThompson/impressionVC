@@ -17,12 +17,13 @@
           </div>
         </div>
       </template>
+      <Footer/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue';
-// import Footer from '@/components/Footer.vue';
+import Footer from '@/components/Footer.vue';
 
 const contentful = require("contentful");
 let client = contentful.createClient({
@@ -34,7 +35,7 @@ export default {
   name: 'Team',
   components: {
     Header,
-    // Footer
+    Footer
   },
   data() {
     return {
