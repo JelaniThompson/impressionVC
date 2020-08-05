@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img src="@/assets/header/HeaderLogo.png" alt="Impression Ventures Logo">
+            <a href="/"><img src="@/assets/header/HeaderLogo.png" alt="Impression Ventures Logo"></a>
         </div>
         <div class="header__menu">
             <ul>
