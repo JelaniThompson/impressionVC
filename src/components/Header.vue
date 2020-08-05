@@ -36,7 +36,6 @@ export default {
     width: 100vw;
     top: 0;
     background-color: #000;
-    position: absolute;
     &__logo {
         justify-self: flex-start;
         align-self: center;

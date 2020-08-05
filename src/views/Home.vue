@@ -83,13 +83,24 @@
 
       <!-- Portfolio Section -->
       <div class="home__portfolioContainer">
-        <h1 class="home__portfolioTitle">Portfolio</h1>
-        <div class="home__fundFilter">
-          <!-- Fund I default selected. Dynamically add and remove fundIsSelected class -->
-          <div class="home__fundItem home__fundI home__fundIsSelected">Fund I</div> 
-          <div class="home__fundItem home__fundII">Fund II</div>
-          <div class="home__fundItem home__fundIII">Fund III</div>
-        </div>
+        <template v-if="isFetching == false">
+          <h1 class="home__portfolioTitle">Portfolio</h1>
+          <div class="home__fundFilter">
+            <!-- Use a guard expression for conditional rendering -->
+            <div 
+              v-for="(item) in fundList"
+              class="home__fundListing home__fundItem"
+              :class="fundSelected && fundSelected"
+              @click="updateFund(item)"
+              :key="item"
+            >
+            Fund {{ item }}
+            </div>
+            <!-- home__fundListing-Fund${fundList[index]}--isSelected -->
+          </div>
+      </template>
+
+
         <template v-if="isFetching == false">
           <div class="home__portfolioImageContainer">
             <img
@@ -185,6 +196,10 @@ export default {
   
   data () {
     return {
+      fundList: ['I', 'II', 'III'],
+      fundIClicked: true,
+      fundIIClicked: false,
+      fundIIIClicked: false,
       flickityOptions: {
         initialIndex: 3,
         prevNextButtons: false,
@@ -272,6 +287,7 @@ export default {
     font-weight: bold;
     font-size: 54px;
     line-height: 66px;
+    margin: 0 auto;
   }
   &__blackTextBlock {
     display: flex;
@@ -412,9 +428,20 @@ export default {
     font-size: 32px;
     font-weight: 500;
     line-height: 39px;
+    &:hover {
+      cursor: pointer;
+    }
   }
-
-  &__fundIsSelected {
+  
+  &__fundListing-FundI--isSelected {
+    color: #1965BD;
+    font-weight: 600;
+  }
+  &__fundListing-FundII--isSelected {
+    color: #1965BD;
+    font-weight: 600;
+  }
+  &__fundListing-FundIII--isSelected {
     color: #1965BD;
     font-weight: 600;
   }
@@ -435,7 +462,7 @@ export default {
     flex-wrap: wrap;
     align-self: center;
     justify-content: center;
-    margin-top: 117px;
+    margin-top: 5%;
   }
   &__portfolioImage {
     width: 200px;
