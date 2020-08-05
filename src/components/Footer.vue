@@ -20,7 +20,7 @@
                 <li>Portfolio</li>
                 <li>Team</li>
                 <li>Contact</li>
-                <li>Press Kit</li>
+                <li><a class="footer__pressLink" href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="footer__pitchButton">
                         Send Us Your Pitch Deck
@@ -137,6 +137,10 @@ export default {
         bottom: 0;
         margin-bottom: 22px;
         color: #fff;
+    }
+    &__pressLink {
+        text-decoration: none;
+        color: white;
     }
 }
 </style>

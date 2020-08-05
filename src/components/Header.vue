@@ -8,7 +8,7 @@
                 <li>Portfolio</li>
                 <li>Team</li>
                 <li>Contact</li>
-                <li>Press Kit</li>
+                <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="header__pitchButton">
                         Send Us Your Pitch Deck
@@ -26,6 +26,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    list-style: none;
+}
 .header {
     display: flex;
     align-items: center;
