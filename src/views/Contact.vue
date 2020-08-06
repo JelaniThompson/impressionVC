@@ -17,9 +17,11 @@
         <li><b>•</b>  Why are you the right team to build this business?</li>
         <li><b>•</b>  What are your fundraising goals?</li>
       </ul>
-      <div class="Contact__sendButton">
-        Send Us Your Pitch Deck
-      </div>
+      <a class="Contact__mailLink" href="mailto:info@impressionventures.com">
+        <div class="Contact__sendButton">
+          Send Us Your Pitch Deck
+        </div>
+      </a>
     </div>
     <Footer />
   </div>
@@ -65,6 +67,9 @@ ul > li {
     font-size: 20px;
     border-radius: 6px;
     margin-top: 50px;
+  }
+  &__mailLink {
+    text-decoration: none;
   }
 }
 </style>

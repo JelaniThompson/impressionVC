@@ -119,17 +119,19 @@
       <!-- Slider section -->
       <div class="home__sliderContainer">
         <h1 class="home__testimonialsTitle">Testimonials</h1>
-        <template v-if="isFetching == false">
-          <!-- <div v-for="(post, index) in testimonialsArray"></div> -->
-            <div v-for="(item, index) in testimonialsArray" :key="index" class="home__testimonialsSlider">
+        <template v-if="isFetching == false">              
+          <agile v-if="(testimonialsArray.length > 0)" :autoplay-speed="5000" :speed="3000" autoplay>
+            <div v-for="(item, index) in testimonialsArray" :key="index" class="slide"> 
+              <!-- home__testimonialsSlider ^ above -->
               <div class="home__contentContainer">
                 <div class="home__textContainer">
-                  <div class="home__sliderQuote">{{ item.fields.quote }}</div>
-                  <div class="home__sliderTeam">{{ item.fields.name }}</div>
-                </div>
-                <img :src="item.fields.image.fields.file.url" alt="Impression Ventures Slider Image" class="home__sliderImage">
+                <div class="home__sliderQuote">{{ item.fields.quote }}</div>
+                <div class="home__sliderTeam">{{ item.fields.name }}</div>
               </div>
+              <img :src="item.fields.image.fields.file.url" alt="Impression Ventures Slider Image" class="home__sliderImage">
             </div>
+          </div>
+          </agile>
         </template>
       </div>
 
@@ -392,7 +394,7 @@ export default {
     color: #fff;
     line-height: 22px;
     font-size: 18px;
-    text-align: left;
+    text-align: center;
     position: relative;
     margin: 0;
   }
@@ -509,6 +511,9 @@ export default {
     position: relative;
     margin-left: 88.24px;
     border-radius: 100%;
+    height: 240px;
+    width: 240px;
+    object-fit: contain;
   }
   &__textContainer {
     flex-direction: column;
