@@ -82,21 +82,25 @@
       </div>
 
       <!-- Portfolio Section -->
+      <!--
+        1. Have value for checking currently selected fund ✅
+        2. Update that value with the fund number on click ✅
+        2. If Contentful fund # matches, recreate array (or just show it from different arrays)
+      -->
       <div class="home__portfolioContainer">
         <template v-if="isFetching == false">
           <h1 class="home__portfolioTitle">Portfolio</h1>
           <div class="home__fundFilter">
             <!-- Use a guard expression for conditional rendering -->
             <div 
-              v-for="(item) in fundList"
+              v-for="(item, index) in fundList"
               class="home__fundListing home__fundItem"
               :class="fundSelected && fundSelected"
-              @click="updateFund(item)"
+              @click="updateFund(index + 1)"
               :key="item"
             >
             Fund {{ item }}
             </div>
-            <!-- home__fundListing-Fund${fundList[index]}--isSelected -->
           </div>
       </template>
 
@@ -104,7 +108,7 @@
         <template v-if="isFetching == false">
           <div class="home__portfolioImageContainer">
             <img
-              v-for="(post, index) in portfolioArray"
+              v-for="(post, index) in selectedFundArray"
               :src="post.fields.logo.fields.file.url"
               :key="post.fields.logo.fields.file.url + '_' + index"
               class="home__portfolioImage"
@@ -120,7 +124,7 @@
       <div class="home__sliderContainer">
         <h1 class="home__testimonialsTitle">Testimonials</h1>
         <template v-if="isFetching == false">              
-          <agile v-if="(testimonialsArray.length > 0)" :autoplay-speed="5000" :speed="3000" :dots="false" :navButtons="false" autoplay>
+          <agile v-if="(testimonialsArray.length > 0)" :autoplay-speed="7000" :speed="3000" :dots="false" :navButtons="false" autoplay>
             <div v-for="(item, index) in testimonialsArray" :key="index" class="slide"> 
               <!-- home__testimonialsSlider ^ above -->
               <div class="home__contentContainer">
@@ -202,6 +206,7 @@ export default {
       fundIClicked: true,
       fundIIClicked: false,
       fundIIIClicked: false,
+      selectedFundArray: [],
       flickityOptions: {
         initialIndex: 3,
         prevNextButtons: false,
@@ -221,6 +226,7 @@ export default {
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
+    this.updateFund(1);
   },
 
   methods: {
@@ -262,6 +268,17 @@ export default {
         });
       });
       console.log(this.newsArray);
+    },
+    updateFund(fund) {
+      this.selectedFundArray = [];
+      client.getEntries().then(entries => {
+        entries.items.forEach(entry => {
+          if (entry.fields.fundNumber == fund) {
+            this.selectedFundArray.push(entry);
+          }
+        });
+      });
+      console.log(this.selectedFundArray);
     }
   },
 }
