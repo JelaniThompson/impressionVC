@@ -85,7 +85,7 @@
       <!--
         1. Have value for checking currently selected fund ✅
         2. Update that value with the fund number on click ✅
-        2. If Contentful fund # matches, recreate array (or just show it from different arrays)
+        3. If Contentful fund # matches, recreate array (or just show it from different arrays) ✅
       -->
       <div class="home__portfolioContainer">
         <template v-if="isFetching == false">
