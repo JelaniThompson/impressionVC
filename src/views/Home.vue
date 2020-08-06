@@ -120,7 +120,7 @@
       <div class="home__sliderContainer">
         <h1 class="home__testimonialsTitle">Testimonials</h1>
         <template v-if="isFetching == false">              
-          <agile v-if="(testimonialsArray.length > 0)" :autoplay-speed="5000" :speed="3000" autoplay>
+          <agile v-if="(testimonialsArray.length > 0)" :autoplay-speed="5000" :speed="3000" :dots="false" :navButtons="false" autoplay>
             <div v-for="(item, index) in testimonialsArray" :key="index" class="slide"> 
               <!-- home__testimonialsSlider ^ above -->
               <div class="home__contentContainer">
@@ -495,6 +495,7 @@ export default {
   }
   &__contentContainer {
     display: inline-flex;
+    margin-top: 5%;
   }
   &__testimonialsTitle {
     margin-top: 117px;
@@ -511,9 +512,9 @@ export default {
     position: relative;
     margin-left: 88.24px;
     border-radius: 100%;
-    height: 240px;
-    width: 240px;
-    object-fit: contain;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
   }
   &__textContainer {
     flex-direction: column;
