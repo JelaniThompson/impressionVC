@@ -38,8 +38,9 @@ a {
     font-family: 'Montserrat', sans-serif;
     max-height: 90px;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     top: 0;
+    padding: 18px 0 18px 0;
     background-color: #000;
     &__logo {
         justify-self: flex-start;

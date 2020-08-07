@@ -86,6 +86,7 @@
         1. Have value for checking currently selected fund ✅
         2. Update that value with the fund number on click ✅
         3. If Contentful fund # matches, recreate array (or just show it from different arrays) ✅
+        4. Assign active class based on truth of active fund variable
       -->
       <div class="home__portfolioContainer">
         <template v-if="isFetching == false">
@@ -285,12 +286,16 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  margin: 0;
+}
 .home {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   &__heroImage {
     object-fit: cover;
+    max-width: 100%;
   }
   &__textContainer {
     display: flex;
