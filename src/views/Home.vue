@@ -577,7 +577,7 @@ export default {
     width: 50%;
     text-align: left;
     font-weight: 500;
-    margin-top: -0.2%;
+    margin-top: 0.5%;
   }
 
   &__newsItemContainer {
@@ -605,7 +605,7 @@ export default {
     font-weight: 500;
     font-size: 18px;
     border-bottom: 1px solid #000;
-    margin-top: -0.5%;
+    margin-top: 1.5%;
   }
 
   &__newsDate {
@@ -644,6 +644,36 @@ export default {
   }
   .agile__slides {
     align-items: flex-start;
+  }
+  // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
+  @media (max-width: 575.98px) { 
+  }
+
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 767.98px) {  }
+
+  // Medium devices (tablets, less than 992px)
+  @media (max-width: 991.98px) {  }
+
+  // Large devices (desktops, less than 1200px)
+  @media (max-width: 1199.98px) {
+    &__blackTextBlockContainer {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;  
+    }
+    &__blackTextBlockTitle {
+      font-size: 32px;
+    }
+    &__blackTextBlockParagraph {
+      margin: 5% 5% 0 5%;
+    }
+    &__pitchButton {
+      width: 22%;
+    }
+    &__portfolioTitle {
+      margin-bottom: 3.5%;
+    }
   }
 }
 </style>

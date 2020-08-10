@@ -85,7 +85,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    // justify-content: space-evenly;
+    margin-bottom: 5%;
   }
   &__coreTeamDisplayHeadshot {
     min-width: 240px;
