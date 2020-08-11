@@ -16,8 +16,17 @@
             </ul>
         </div>
         <Slide right>
-            <a href="/">
+        <a href="/">
             <span>Home</span>
+        </a>
+        <a href="/team">
+            <span>Team</span>
+        </a>
+        <a href="/contact">
+            <span>Contact</span>
+        </a>
+        <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
+            <span>Press Kit</span>
         </a>
 </Slide>
     </div>

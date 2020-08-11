@@ -115,9 +115,11 @@
               class="home__portfolioImage"
             />
           </div>
-         <div class="home__pitchButton">
-          Send Us Your Pitch Deck
-         </div>
+         <a class="home__mailLink" href="mailto:info@impressionventures.com">
+          <div class="home__pitchButton">
+            Send Us Your Pitch Deck
+          </div>
+        </a>
         </template>
       </div>
 
@@ -647,6 +649,9 @@ export default {
   }
   .agile__slides {
     align-items: flex-start;
+  }
+  &__mailLink {
+    text-decoration: none;
   }
   // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
   @media (max-width: 575.98px) { 
