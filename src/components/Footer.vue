@@ -144,6 +144,9 @@ export default {
         text-decoration: none;
         color: white;
     }
+    @media (max-width: 767.98px) {
+        display: none;
+    }
     @media (max-width: 991.98px) {
         // height: 500px;
         // max-height: 185px;

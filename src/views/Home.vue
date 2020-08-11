@@ -173,8 +173,8 @@
           <img src="@/assets/images/ecosystem/500startups.jpg" alt="500 Startups Logo" class="networkImageItem">
         </div>
       </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.157302335472!2d-79.4017364845009!3d43.70727995695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b333cd1040c05%3A0xc42640fdd25816c1!2sImpression%20Ventures!5e0!3m2!1sen!2sca!4v1595959831225!5m2!1sen!2sca" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <div class="home__footerContainer">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.157302335472!2d-79.4017364845009!3d43.70727995695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b333cd1040c05%3A0xc42640fdd25816c1!2sImpression%20Ventures!5e0!3m2!1sen!2sca!4v1595959831225!5m2!1sen!2sca" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <Footer/>
       </div>
   </div>
@@ -330,7 +330,7 @@ export default {
     color: #fff;
     position: relative;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 2.5em;
     line-height: 46px;
     justify-self: center;
     align-self: center;
@@ -653,13 +653,32 @@ export default {
   }
 
   // Small devices (landscape phones, less than 768px)
-  @media (max-width: 767.98px) {  }
+  @media (max-width: 767.98px) { // 767.98
+    &__blackTextBlock {
+      width: 100%;
+      max-width: 100%;
+    }
+    &__text {
+      font-size: 48px;
+    }
+    &__blackTextBlockParagraph {
+      margin: 10% 5% 0 10%;
+    }
+    &__carousel {
+      width: 100%;
+    }
+    &__trudeauWealthSimpleImage {
+      width: 100%;
+    }
+    &__portfolioImage {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 8%;
+    }
+  }
 
   // Medium devices (tablets, less than 992px)
   @media (max-width: 991.98px) { 
-    &__blackTextBlockTitle {
-      font-size: 27px !important;
-    }
     &__contentRow {
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -703,9 +722,9 @@ export default {
       flex-direction: column;
       justify-self: center;  
     }
-    &__blackTextBlockTitle {
-      font-size: 32px;
-    }
+    // &__blackTextBlockTitle {
+    //   font-size: 32px;
+    // }
     &__blackTextBlockParagraph {
       margin: 5% 5% 0 5%;
     }

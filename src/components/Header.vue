@@ -15,12 +15,22 @@
                 </li>
             </ul>
         </div>
+        <Slide right>
+            <a href="/">
+            <span>Home</span>
+        </a>
+</Slide>
     </div>
 </template>
 
 <script>
+import { Slide } from 'vue-burger-menu'
+
 export default {
     name: 'Header',
+    components: {
+        Slide
+    }
 }
 </script>
 
@@ -31,6 +41,7 @@ a {
     display: block;
     list-style: none;
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -63,6 +74,11 @@ a {
         padding: 18px;
         border-radius: 4px;
         font-weight: 600;
+    }
+    @media (max-width: 767.98px) {
+        &__menu {
+            display: none;
+        }
     }
 }
 </style>
