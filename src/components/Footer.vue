@@ -53,7 +53,7 @@ export default {
     justify-content: center;
     // font-family: 'Montserrat', sans-serif;
     max-height: 185px;
-    height: 100%;
+    height: 500px;
     width: 100vw;
     background-color: #1965BD;
     position: relative;
@@ -113,7 +113,7 @@ export default {
         justify-items: flex-end;
         margin-top: 20px;
         margin-bottom: 22px;
-        margin-right: 28px;
+        margin-right: 55%;
         position: relative;
     }
     &__socialButtonRow > img {
@@ -129,6 +129,9 @@ export default {
         color: #fff;
         display: flex;
         justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
     &__copyright {
         position: absolute;
@@ -140,6 +143,26 @@ export default {
     &__footerLink {
         text-decoration: none;
         color: white;
+    }
+    @media (max-width: 991.98px) {
+        // height: 500px;
+        // max-height: 185px;
+        position: relative;
+        &__addressText {
+            width: 500px;
+            margin-top: -5.5%;
+            margin-left: -5%;
+            position: absolute;
+        }
+        &__phoneText {
+            margin-left: -5%;
+            position: absolute;
+        }
+        &__bottomRow {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     }
 }
 </style>

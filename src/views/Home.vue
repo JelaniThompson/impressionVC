@@ -436,6 +436,7 @@ export default {
   &__portfolioTitle {
     color: #000;
     margin-top: 117px;
+    margin-bottom: 2%;
     font-size: 38px;
     width: 100%;
   }
@@ -595,6 +596,9 @@ export default {
     flex-direction: column;
     margin-top: -30%;
     margin-bottom: 3%;
+    &:nth-of-type(1) {
+      margin-top: 1%;
+    }
   }
 
   &__readMore {
@@ -634,7 +638,6 @@ export default {
   &__networkImageContainer > img {
     width: 23%;
     padding: 5%;
-    // border-radius: 20%;
   }
   &__footerContainer {
     margin: 0;
@@ -653,7 +656,45 @@ export default {
   @media (max-width: 767.98px) {  }
 
   // Medium devices (tablets, less than 992px)
-  @media (max-width: 991.98px) {  }
+  @media (max-width: 991.98px) { 
+    &__blackTextBlockTitle {
+      font-size: 27px !important;
+    }
+    &__contentRow {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__circle-container {
+      margin-top: 0%;
+      margin-bottom: 8%;
+    }
+    &__circle-paragraph {
+      margin-top: 4%;
+    }
+    &__pitchButton {
+      margin: 68px auto 68px auto;
+    }
+    &__sliderQuote {
+      font-size: 24px;
+      margin-left: 12%;
+      margin-top: 8%;
+    }
+    &__sliderTeam {
+      margin-left: 12%;
+    }
+    &__sliderImage {
+      margin: 8% 5% 0 5%;
+    }
+    &__storyLink {
+      margin-bottom: 3%;
+    }
+    &__newsDate {
+      margin-top: 3%;
+    }
+    &__networkTitle {
+      margin-top: 5%;
+    }
+  }
 
   // Large devices (desktops, less than 1200px)
   @media (max-width: 1199.98px) {

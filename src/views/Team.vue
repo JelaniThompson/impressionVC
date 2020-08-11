@@ -108,5 +108,18 @@ export default {
   &__ItemAlignContainer {
     text-align: left;
   }
+
+  @media (max-width: 991.98px) {
+    &__coreTeamDisplayHeadshot {
+      min-width: 180px;
+      height: 180px;
+    }
+    &__coreTeamDisplayName {
+      font-size: 18px;
+    }
+    &__coreTeamDisplayTitle {
+      font-size: 18px;
+    }
+  }
 }
 </style>
