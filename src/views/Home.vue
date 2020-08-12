@@ -12,9 +12,7 @@
           <p class="home__blackTextBlockTitle">With You Each Step of the Way</p>
           <p class="home__blackTextBlockParagraph">This is about you - <b>the founders</b>. We lean in and get our hands dirty when and where you want us.</p>
         </div>
-      </div>
-      
-      <!-- Trudeau Image -->
+              <!-- Trudeau Image -->
       <div class="home__carousel">
         <agile :autoplay-speed="5000" :speed="3000" fade pause-on-hover autoplay>
           <div class="slide">
@@ -25,6 +23,8 @@
           </div>
         </agile>
       </div>
+      </div>
+      
 
       <!-- Investment Policy -->
       <div class="home__investmentPolicyContainer">
@@ -35,36 +35,40 @@
               <div class="home__circle">
                 <img src="@/assets/images/dollar.png" alt="circle dollar" class="home__circleIcon">
               </div>
+              <div class="titleParaContainer">
                 <h2 class="home__fintech-header home__circle-header">
                   FinTech Specialist
                 </h2>
-                <p class="home__fintech-paragraph home__circle-paragraph">
+                <p class="home__seed-paragraph home__circle-paragraph">
                   Our firm only backs fintech startups and has been doing so since 2013.
                 </p>
+              </div>
             </div>
             <div class="home__circle-container">
               <div class="home__circle home__seed-circle">
                 <img src="@/assets/images/bar.png" alt="circle seed" class="home__circleIcon">
               </div>
+              <div class="titleParaContainer">
                 <h2 class="home__seed-header home__circle-header">
                   Late Seed and Early Series A
                 </h2>
                 <p class="home__seed-paragraph home__circle-paragraph">
                   We invest in late Seed and early Series A rounds. Our initial investments range from $1M-$2M into $2M+ rounds. We support high-growth startups that must demonstrate a complete product for us to participate in the round.
                 </p>
+              </div>
             </div>
             <div class="home__circle-container">
               <div class="home__circle home__lead-circle">
                 <img src="@/assets/images/person.png" alt="circle lead" class="home__circleIcon">
               </div>
-              <!-- <div class="home__titleParaContainer"> -->
+              <div class="home__titleParaContainer">
                <h2 class="home__seed-header home__circle-header">
                   Lead Investors
                 </h2>
                 <p class="home__lead-paragraph home__circle-paragraph">
                   We lead (or co-lead) our initial investments with simple, founder-friendly term sheets. We want to position our portfolio companies for successful future growth without complicated strings attached.
                 </p>
-              <!-- </div> -->
+              </div>
             </div>
             <div class="home__circle-container">
               <div class="home__circle home__active-circle">
@@ -144,7 +148,7 @@
 
       <!-- News Section -->
       <div class="home__newsContainer">
-        <h1 class="home__newsTitle">News</h1>
+        <h1 class="home__newsTitle">Media</h1>
         <h1 class="home__featuredTitle">
           Featured
         </h1>
@@ -291,6 +295,14 @@ export default {
 * {
   margin: 0;
 }
+.slide > img {
+  max-width: 600px;
+  height: 600px;
+  object-fit: contain;
+}
+.agile__actions {
+  display: none;
+} 
 .home {
   display: flex;
   justify-content: center;
@@ -321,9 +333,9 @@ export default {
     align-items: center;
     justify-content: center;
     background-color: #000;
-    width: 50%;
+    width: 100%;
     height: 720px;
-    max-width: 720px;
+    // max-width: 720px;
     max-height: 720px;
     left: 0;
     position: relative; // For text inside of it
@@ -378,13 +390,13 @@ export default {
   }
   &__investPolicyNumberGroup {
     min-height: 340px;
-    max-width: 1309px;
     margin-top: 85px;
     width: 100%;
   }
   &__contentRow {
     display: flex;
     justify-content: space-between;
+    margin: 0px 2% 0px 2%;
   }
   &__circle-container {
     display: flex;
@@ -418,13 +430,15 @@ export default {
     color: #fff;
     line-height: 22px;
     font-size: 18px;
-    text-align: center;
+    text-align: left;
     position: relative;
     margin: 0;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   &__fintech-paragraph {
     width: 100%;
-    max-width: 262px;
+    // max-width: 262px;
   }
 
   &__portfolioContainer {
@@ -672,9 +686,9 @@ export default {
     &__carousel {
       width: 100%;
     }
-    &__trudeauWealthSimpleImage {
-      width: 100%;
-    }
+    // &__trudeauWealthSimpleImage {
+    //   width: 100%;
+    // }
     &__portfolioImage {
       width: 180px;
       height: 180px;

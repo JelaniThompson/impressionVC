@@ -3,14 +3,20 @@
         <div class="footer__addressHomeContainer">
             <div class="footer_address">
                 <div class="footer__addressText">
-                    <img class="footer__addressIcon" src="@/assets/images/location-icon.png" alt="Impression Ventures Address Icon">
+                    <img class="footer__addressIcon" src="@/assets/images/location-icon.png" alt="Impression Ventures Address Icon"/>
                     2300 Yonge St, PO Box 2398<br/> Toronto, ON M4P 1E4
                 </div>
             </div>
             <div class="footer__phone">
                 <div class="footer__phoneText">
-                    <img src="@/assets/images/phone-icon.png" alt="Impression Ventures Phone Number" class="footer__phoneIcon">
+                    <img src="@/assets/images/phone-icon.png" alt="Impression Ventures Phone Number" class="footer__phoneIcon"/>
                     (647) 725-3355
+                </div>
+            </div>
+            <div class="footer__email">
+                <div class="footer__emailText">
+                    <img src="@/assets/images/email-icon.png" alt="Impression Ventures Email" class="footer__emailIcon"/>
+                    (info) @ impression.ventures
                 </div>
             </div>
         </div>
@@ -51,7 +57,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    // font-family: 'Montserrat', sans-serif;
     max-height: 185px;
     height: 500px;
     width: 100vw;
@@ -82,9 +87,20 @@ export default {
         text-align: left;
         margin-top: 8px;
     }
+    &__emailText {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-align: left;
+        margin-top: 12px;
+    }
     &__phoneIcon {
         margin-left: 40px;
         margin-right: 14px;
+    }
+    &__emailIcon {
+        margin-left: 40px;
+        margin-right: 10px;
     }
     &__pageLinks {
         margin-left: 28%;
