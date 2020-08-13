@@ -703,6 +703,29 @@ export default {
       margin-left: auto !important;
       margin: 5% auto 0% auto;
     }
+    &__featuredTitle {
+      display: none;
+    }
+    &__newsContainer {
+      justify-content: center;
+    }
+    &__newsItemContainer {
+      margin-right: 0;
+    }
+    &__newsStoryTitle {
+      margin: 0 auto;
+      width: 100%;
+    }
+    &__storyLink {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &__networkContainer {
+      min-height: 0;
+    }
+    &__readMore {
+      width: 100%;
+    }
   }
 
   // Small devices (landscape phones, less than 768px)
