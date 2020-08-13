@@ -696,6 +696,9 @@ export default {
     &__contentContainer {
       margin-bottom: 64px;
     }
+    &__blackTextBlockTitle {
+      font-size: 1.3em !important;
+    }
   }
 
   @media (max-width: 575.98px) {
