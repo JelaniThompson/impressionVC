@@ -327,7 +327,7 @@ export default {
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 54px;
-    line-height: 66px;
+    line-height: normal;
     margin: 0 auto;
   }
   &__blackTextBlock {
@@ -671,6 +671,13 @@ export default {
   }
 
   // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
+  @media (min-width: 575.98px) {
+    .slide > img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
   @media (max-width: 575.98px) {
     .slide > img {
       width: 400px;
@@ -735,7 +742,7 @@ export default {
       max-width: 100%;
     }
     &__text {
-      font-size: 2em;
+      font-size: 1.8em;
     }
     &__blackTextBlockTitle {
       font-size: 2em;
