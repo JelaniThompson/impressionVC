@@ -669,8 +669,40 @@ export default {
   &__mailLink {
     text-decoration: none;
   }
+
   // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
-  @media (max-width: 575.98px) { 
+  @media (max-width: 575.98px) {
+    .slide > img {
+      width: 400px;
+      height: 400px;
+    }
+    &__text {
+      font-size: 2em;
+    }
+    &__portfolioImageContainer > &__portfolioImage {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 5%;
+    }
+    &__contentContainer {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    &__sliderImage {
+      margin: 0 auto !important;
+      justify-self: center;
+    }
+    &__sliderQuote {
+      font-size: 1.5em;
+      padding: 0 6% 0 6%;
+      margin-top: 8%;
+      margin-left: 0 !important;
+      word-break: break-all;
+    }
+    &__sliderTeam {
+      margin-left: auto !important;
+      margin: 5% auto 0% auto;
+    }
   }
 
   // Small devices (landscape phones, less than 768px)
@@ -680,7 +712,7 @@ export default {
       max-width: 100%;
     }
     &__text {
-      font-size: 48px;
+      font-size: 2em;
     }
     &__blackTextBlockTitle {
       font-size: 2em;
@@ -747,9 +779,6 @@ export default {
       flex-direction: column;
       justify-self: center;  
     }
-    // &__blackTextBlockTitle {
-    //   font-size: 32px;
-    // }
     &__blackTextBlockParagraph {
       margin: 5% 5% 0 5%;
     }
