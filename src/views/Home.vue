@@ -676,6 +676,26 @@ export default {
       width: 250px !important;
       height: 250px !important;
     }
+    &__fundFilter {
+      width: 90%;
+    }
+    &__fundItem {
+      font-size: 24px;
+    }
+    &__portfolioImageContainer > &__portfolioImage {
+      width: 70px !important;
+      height: 70px !important;
+    }
+    &__pitchButton {
+      margin: 32px auto 64px auto !important;
+      width: 50% !important;
+    }
+    &__portfolioContainer {
+      min-height: 0px;
+    }
+    &__contentContainer {
+      margin-bottom: 64px;
+    }
   }
 
   @media (max-width: 575.98px) {

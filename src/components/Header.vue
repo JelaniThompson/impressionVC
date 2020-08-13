@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <a href="/"><img src="@/assets/header/HeaderLogo.png" alt="Impression Ventures Logo"></a>
+            <a href="/"><img src="@/assets/header/HeaderLogo.png" alt="Impression Ventures Logo" class="header__logo"></a>
         </div>
         <div class="header__menu">
             <ul>
@@ -51,6 +51,10 @@ a {
     list-style: none;
 }
 
+.bm-burger-bars {
+    color: #fff;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -66,7 +70,7 @@ a {
         justify-self: flex-start;
         align-self: center;
         margin-right: auto;
-        margin-left: 87px;
+        margin-left: 10%;
     }
     &__menu > ul {
         color: #fff;
