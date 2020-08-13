@@ -671,10 +671,10 @@ export default {
   }
 
   // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
-  @media (min-width: 575.98px) {
+  @media screen and (max-width: 414px) {
     .slide > img {
-      width: 250px;
-      height: 250px;
+      width: 250px !important;
+      height: 250px !important;
     }
   }
 
