@@ -699,6 +699,9 @@ export default {
     &__blackTextBlockTitle {
       font-size: 1.3em !important;
     }
+    &__newsStoryTitle {
+      font-size: 1.5em;
+    }
   }
 
   @media (max-width: 575.98px) {
