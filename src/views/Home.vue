@@ -303,6 +303,9 @@ export default {
 .agile__actions {
   display: none;
 } 
+.agile__slide {
+  margin-top: 2%;
+}
 .home {
   display: flex;
   justify-content: center;
@@ -329,14 +332,13 @@ export default {
   }
   &__blackTextBlock {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     align-items: center;
     justify-content: center;
     background-color: #000;
+    padding: 5% 0 5% 0;
     width: 100%;
-    height: 720px;
-    // max-width: 720px;
-    max-height: 720px;
     left: 0;
     position: relative; // For text inside of it
   }
@@ -680,19 +682,23 @@ export default {
     &__text {
       font-size: 48px;
     }
+    &__blackTextBlockTitle {
+      font-size: 2em;
+    }
     &__blackTextBlockParagraph {
       margin: 10% 5% 0 10%;
     }
     &__carousel {
       width: 100%;
     }
-    // &__trudeauWealthSimpleImage {
-    //   width: 100%;
-    // }
     &__portfolioImage {
       width: 180px;
       height: 180px;
       margin-bottom: 8%;
+    }
+    &__sliderImage {
+      width: 200px;
+      height: 200px;
     }
   }
 
