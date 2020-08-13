@@ -702,6 +702,12 @@ export default {
     &__newsStoryTitle {
       font-size: 1.5em;
     }
+    &__sliderTeam {
+      font-size: 1.5em;
+    }
+    &__investmentPolicyTitle {
+      font-size: 2em;
+    }
   }
 
   @media (max-width: 575.98px) {
