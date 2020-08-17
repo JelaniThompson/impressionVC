@@ -671,7 +671,7 @@ export default {
   }
 
   // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
-  @media screen and (max-width: 414px) {
+  @media screen and (min-width: 414px) and (max-width: 450px) {
     .slide > img {
       width: 250px !important;
       height: 250px !important;

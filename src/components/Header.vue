@@ -10,25 +10,25 @@
                 <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="header__pitchButton">
-                        Send Us Your Pitch Deck
+                        How to Pitch Us
                     </div>
                 </li>
             </ul>
         </div>
-        <Slide right>
-        <a href="/">
-            <span>Home</span>
-        </a>
-        <a href="/team">
-            <span>Team</span>
-        </a>
-        <a href="/contact">
-            <span>Contact</span>
-        </a>
-        <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
-            <span>Press Kit</span>
-        </a>
-</Slide>
+        <Slide class="header__burger" right>
+            <a href="/">
+                <span>Home</span>
+            </a>
+            <a href="/team">
+                <span>Team</span>
+            </a>
+            <a href="/contact">
+                <span>Contact</span>
+            </a>
+            <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
+                <span>Press Kit</span>
+            </a>
+        </Slide>
     </div>
 </template>
 
@@ -88,9 +88,11 @@ a {
         border-radius: 4px;
         font-weight: 600;
     }
-    @media (max-width: 767.98px) {
-        &__menu {
-            display: none;
+    
+    @media (min-width: 767.98px) {
+        &__burger {
+            display: none !important;
+            background-color: white;
         }
     }
 }
