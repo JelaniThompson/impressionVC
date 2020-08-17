@@ -88,6 +88,12 @@ a {
         border-radius: 4px;
         font-weight: 600;
     }
+
+    @media screen and (min-width: 414px) and (max-width: 450px) {
+        &__menu > ul {
+            display: none;
+        }    
+    }
     
     @media (min-width: 767.98px) {
         &__burger {

@@ -19,7 +19,7 @@
             <img src="../assets/images/slider/Team_Symend.jpeg"/>
           </div>
           <div class="slide">
-            <img src="../assets/images/slider/Team_Goose.jpg"/>
+            <img src="../assets/images/slider/Team_Goose_2.jpg"/>
           </div>
           <div class="slide">
             <img src="../assets/images/slider/Team_Sensibill.jpeg"/>
@@ -314,6 +314,7 @@ export default {
   max-width: 600px;
   height: 600px;
   object-fit: contain;
+  // margin-top: -8%;
 }
 .agile__actions {
   display: none;
@@ -652,6 +653,15 @@ export default {
     font-weight: 300;
   }
 
+  &__blackTextBlockTextContainer {
+    width: 100%;
+    margin: 3% auto -3% auto;
+  }
+
+  &__blackTextBlockParagraph {
+    margin: 3% auto -3% auto;
+  }
+
   &__rightArrow {
     max-width: 38px;
     max-height: 38px;
@@ -667,6 +677,9 @@ export default {
     width: 100%;
     position: relative;
     justify-content: center;
+  }
+  &__networkTitle {
+    color: #000;
   }
   &__networkImageContainer > img {
     width: 23%;
@@ -791,11 +804,16 @@ export default {
     &__text {
       font-size: 1.8em;
     }
+    &__blackTextBlockContainer {
+      margin-bottom: -3%;
+      width: 100%;
+    }
     &__blackTextBlockTitle {
       font-size: 2em;
     }
     &__blackTextBlockParagraph {
-      margin: 10% 5% 0 10%;
+      // margin: 10% 5% 0 10%;
+      margin: 0 auto;
     }
     &__carousel {
       width: 100%;
@@ -857,7 +875,7 @@ export default {
       justify-self: center;  
     }
     &__blackTextBlockParagraph {
-      margin: 5% 5% 0 5%;
+      margin: 5% auto 0 auto;
     }
     &__pitchButton {
       width: 22%;

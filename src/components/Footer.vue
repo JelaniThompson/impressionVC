@@ -34,8 +34,8 @@
             </ul>
             <div class="footer__bottomRow">
                 <div class="footer__socialButtonRow">
-                    <img src="@/assets/images/twitter-icon.png" alt="Impression Ventures Twitter" class="footer__twitter">
-                    <img src="@/assets/images/medium-icon.png" alt="Impression Ventures Blog" class="footer__medium">
+                    <a href="https://twitter.com/ImpressionVC" class="footer__footerSocialLink" target="_blank"><img src="@/assets/images/twitter-icon.png" alt="Impression Ventures Twitter" class="footer__twitter"></a>
+                    <a href="https://medium.com/@impressionvc" class="footer__footerSocialLink" target="_blank"><img src="@/assets/images/medium-icon.png" alt="Impression Ventures Blog" class="footer__medium"></a>
                 </div>
             </div>
         </div>
@@ -140,6 +140,7 @@ export default {
     &__twitter {
         margin: 0 28px 0 28px;  
     }
+
     &__bottomRow {
         color: #fff;
         display: flex;
@@ -158,6 +159,10 @@ export default {
     &__footerLink {
         text-decoration: none;
         color: white;
+    }
+    &__footerSocialLink {
+        text-decoration: none;
+        align-self: center;        
     }
     @media (max-width: 767.98px) {
         display: none;
