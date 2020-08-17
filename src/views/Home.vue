@@ -3,7 +3,7 @@
     <Header />
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <p class="home__text">We invest in game-changing FinTech companies across North America</p>
+        <vue-typer class="home__text" :text='["We invest in game-changing FinTech companies across North America", "We invest in founders challenging the status quo", "We invest in leading-edge technology"]'></vue-typer>
       </div>
 
       <!-- Black Text Box -->
@@ -182,7 +182,7 @@
 
       <div class="home__networkContainer">
         <h1 class="home__networkTitle">
-          Our Ecosystem / Network
+          Our Ecosystem
         </h1>
         <div class="home__networkImageContainer">
           <img src="@/assets/images/ecosystem/package-lock.png" alt="Holt Accelerator Logo" class="networkImageItem">
@@ -203,12 +203,19 @@
 
 <script>
 import { VueAgile } from 'vue-agile';
+import { VueTyper } from 'vue-typer'
 
 const contentful = require("contentful");
 let client = contentful.createClient({
   space: "oodmiydgatbo",
   accessToken: "HkkwCwWrfXiNy0ZYE3ggtBhEBLL_Kmo6BtqYwzarydg"
 });
+
+// new Typewriter('.home__text', {
+//   strings: ['game-changing FinTech companies across North America', 'founders challenging the status quo', 'disruptive technology'],
+//   autoStart: true,
+//   loop: true
+// });
 
 // @ is an alias to /src
 import Header from '@/components/Header.vue';
@@ -218,6 +225,7 @@ export default {
   name: 'Home',
   components: {
     Header,
+    VueTyper,
     agile: VueAgile,
     Footer
   },
@@ -302,6 +310,7 @@ export default {
       });
       console.log(this.selectedFundArray);
     }
+    
   },
 }
 </script>
@@ -309,6 +318,13 @@ export default {
 <style lang="scss">
 * {
   margin: 0;
+}
+.vue-typer {
+  
+  .custom.char {
+    color: #fff; 
+    position: relative;
+  }
 }
 .slide > img {
   max-width: 600px;
