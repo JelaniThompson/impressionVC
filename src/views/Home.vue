@@ -16,10 +16,25 @@
       <div class="home__carousel">
         <agile :autoplay-speed="5000" :speed="3000" fade pause-on-hover autoplay>
           <div class="slide">
-            <img src="../assets/images/TrudeauWealthSimple.png" alt="Trudeau at Wealthsimple" class="home__trudeauWealthSimpleImage">
+            <img src="../assets/images/slider/Team_Symend.jpeg"/>
           </div>
           <div class="slide">
-            <img src="https://pbs.twimg.com/media/C-xV09gW0AAIj3X.jpg" alt="Sensibill Team" class="sensibill">
+            <img src="../assets/images/slider/Team_Goose.jpg"/>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Sensibill.jpeg"/>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Avesdo.jpg"/>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Brim.jpg"/>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Wealthsimple.jpg"/>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Owl_3.jpeg"/>
           </div>
         </agile>
       </div>

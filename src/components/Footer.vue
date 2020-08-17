@@ -34,7 +34,6 @@
             </ul>
             <div class="footer__bottomRow">
                 <div class="footer__socialButtonRow">
-                    <img src="@/assets/images/email-icon.png" alt="Impression Ventures Email" class="footer__email">
                     <img src="@/assets/images/twitter-icon.png" alt="Impression Ventures Twitter" class="footer__twitter">
                     <img src="@/assets/images/medium-icon.png" alt="Impression Ventures Blog" class="footer__medium">
                 </div>
