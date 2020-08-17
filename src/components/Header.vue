@@ -92,6 +92,8 @@ a {
     @media (min-width: 767.98px) {
         &__burger {
             display: none !important;
+        }
+        .bm-burger-bars {
             background-color: white;
         }
     }
