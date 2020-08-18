@@ -1,13 +1,12 @@
-<template>
+<template v-if="isFetching == false">
   <div class="Team">
     <Header/>
-      <template v-if="isFetching == false">
       <div class="Team__teamContainer">
         <div class="Team__titleContainer">
           <h1 class="Team__headerTitle">Team</h1>
         </div>
           <div class="Team__coreTeamDisplayContainer">
-            <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray.reverse()" :key="index">
+            <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray.slice().reverse()" :key="index">
               <div class="Team__ItemAlignContainer">
                 <img :src="item.fields.headshot.fields.file.url" alt="Team Member Headshot" class="Team__coreTeamDisplayHeadshot"/>
                 <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
@@ -16,7 +15,6 @@
             </div>
           </div>
         </div>
-      </template>
       <Footer/>
   </div>
 </template>
@@ -40,6 +38,12 @@ export default {
       isFetching: true,
     }
   },
+  
+  // computed: {
+  //   arrayReverse() {
+  //     this.reverse();
+  //   }
+  // },
   
   beforeMount() {
     this.fetchTeam()
