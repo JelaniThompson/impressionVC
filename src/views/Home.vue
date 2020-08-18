@@ -457,8 +457,10 @@ export default {
     text-align: left;
     position: relative;
     margin: 0;
-    word-wrap: break-word;
+    word-wrap: break-all;
     hyphens: auto;
+    min-width: 300px;
+    white-space: inherit;
   }
   &__fintech-paragraph {
     width: 100%;
