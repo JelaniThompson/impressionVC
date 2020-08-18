@@ -1,7 +1,7 @@
 <template>
   <div class="Team">
     <Header/>
-      <!-- <template v-if="isFetching == false"> -->
+      <template v-if="isFetching == false">
       <div class="Team__teamContainer">
         <div class="Team__titleContainer">
           <h1 class="Team__headerTitle">Team</h1>
@@ -16,20 +16,17 @@
             </div>
           </div>
         </div>
-      <!-- </template> -->
+      </template>
       <Footer/>
   </div>
 </template>
 
 <script>
+import { client } from '../contentfulConfig.js'
+
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
-const contentful = require("contentful");
-let client = contentful.createClient({
-  space: "oodmiydgatbo",
-  accessToken: "HkkwCwWrfXiNy0ZYE3ggtBhEBLL_Kmo6BtqYwzarydg"
-});
 
 export default {
   name: 'Team',

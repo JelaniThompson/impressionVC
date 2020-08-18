@@ -205,17 +205,7 @@
 import { VueAgile } from 'vue-agile';
 import { VueTyper } from 'vue-typer'
 
-const contentful = require("contentful");
-let client = contentful.createClient({
-  space: "oodmiydgatbo",
-  accessToken: "HkkwCwWrfXiNy0ZYE3ggtBhEBLL_Kmo6BtqYwzarydg"
-});
-
-// new Typewriter('.home__text', {
-//   strings: ['game-changing FinTech companies across North America', 'founders challenging the status quo', 'disruptive technology'],
-//   autoStart: true,
-//   loop: true
-// });
+import { client } from '../contentfulConfig.js'
 
 // @ is an alias to /src
 import Header from '@/components/Header.vue';
