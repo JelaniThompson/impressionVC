@@ -9,7 +9,7 @@
           <div class="Team__coreTeamDisplayContainer">
             <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray.reverse()" :key="index">
               <div class="Team__ItemAlignContainer">
-                <!-- <img :src="item.fields.headshot.fields.file.url" alt="Team Member Headshot" class="Team__coreTeamDisplayHeadshot"/> -->
+                <img :src="item.fields.headshot.fields.file.url" alt="Team Member Headshot" class="Team__coreTeamDisplayHeadshot"/>
                 <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
                 <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2>
               </div>
@@ -40,6 +40,11 @@ export default {
       isFetching: true,
     }
   },
+  
+  beforeMount() {
+    this.fetchTeam()
+  },
+
   methods: {
     fetchTeam() {
       console.log('Fetching');
@@ -54,9 +59,6 @@ export default {
       console.log(this.coreArray);
     }
   },
-  beforeMount() {
-    this.fetchTeam()
-  }
 }
 </script>
 
