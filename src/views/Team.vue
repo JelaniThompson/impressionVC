@@ -54,7 +54,7 @@ export default {
       console.log(this.coreArray);
     }
   },
-  mounted() {
+  beforeMount() {
     this.fetchTeam()
   }
 }

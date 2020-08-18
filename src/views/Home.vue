@@ -3,7 +3,7 @@
     <Header />
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <vue-typer class="home__text" :text='["We invest in game-changing FinTech companies across North America", "We invest in founders challenging the status quo", "We invest in leading-edge technology"]'></vue-typer>
+        <vue-typer class="home__text" :text='["We invest in game-changing FinTech companies across North America", "We invest in founders challenging \n the status quo", "We invest in leading-edge \n technology"]'></vue-typer>
       </div>
 
       <!-- Black Text Box -->
@@ -14,7 +14,7 @@
         </div>
               <!-- Trudeau Image -->
       <div class="home__carousel">
-        <agile :autoplay-speed="5000" :speed="3000" fade pause-on-hover autoplay>
+        <agile :autoplay-speed="5000" :speed="3000" pause-on-hover autoplay>
           <div class="slide">
             <img src="../assets/images/slider/Team_Symend.jpeg"/>
           </div>
