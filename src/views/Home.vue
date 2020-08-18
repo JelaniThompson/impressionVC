@@ -3,7 +3,7 @@
     <Header />
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <p class="home__text">We invest in <span><vue-typer :text='["game-changing FinTech companies across North America", "founders challenging \n the status quo", "leading-edge \n technology"]'></vue-typer></span></p>
+        <p class="home__text">We invest in <span><vue-typer erase-style='clear' :text='["game-changing FinTech companies across North America", "founders challenging \n the status quo", "leading-edge \n technology"]'></vue-typer></span></p>
       </div>
 
       <!-- Black Text Box -->
