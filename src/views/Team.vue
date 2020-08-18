@@ -27,7 +27,6 @@ import { client } from '../contentfulConfig.js'
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
-
 export default {
   name: 'Team',
   components: {

@@ -17,12 +17,12 @@ Vue.use(VueRouter)
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Team
+    component: () => import('../views/Team.vue')
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: Team
+    component: () => import('../views/Contact.vue')
   }
 ]
 

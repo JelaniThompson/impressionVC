@@ -13,7 +13,7 @@
         <li><b>•</b>  How will you monetize your product/service?</li>
         <li><b>•</b>  How do you plan on acquiring customers?</li>
         <li><b>•</b>  How large of a problem is this (be geographic specific)?</li>
-        <li><b>•</b> Do you have any relevant traction?</li>
+        <li><b>•</b>  Do you have any relevant traction?</li>
         <li><b>•</b>  Why are you the right team to build this business?</li>
         <li><b>•</b>  What are your fundraising goals?</li>
       </ul>
