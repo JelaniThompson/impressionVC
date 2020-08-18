@@ -1,7 +1,7 @@
 <template>
   <div class="Team">
     <Header/>
-      <template v-if="isFetching == false">
+      <!-- <template v-if="isFetching == false"> -->
       <div class="Team__teamContainer">
         <div class="Team__titleContainer">
           <h1 class="Team__headerTitle">Team</h1>
@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-      </template>
+      <!-- </template> -->
       <Footer/>
   </div>
 </template>
