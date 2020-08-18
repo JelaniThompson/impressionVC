@@ -24,11 +24,12 @@
         <div class="footer__pageLinks">
             <ul>
                 <li><a class="footer__footerLink" href="/team">Team</a></li>
-                <li><a class="footer__footerLink" href="/contact">Contact</a></li>
                 <li><a class="footer__footerLink" href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="footer__pitchButton">
-                        Send Us Your Pitch Deck
+                        <a href="/contact">
+                            Send Us Your Pitch Deck
+                        </a>
                     </div>
                 </li>
             </ul>
@@ -102,7 +103,7 @@ export default {
         margin-right: 10px;
     }
     &__pageLinks {
-        margin-left: 28%;
+        margin-left: 36.5%;
         margin-top: 20px;
         align-self: flex-start;
         flex-wrap: nowrap;
@@ -122,6 +123,10 @@ export default {
         padding: 18px;
         border-radius: 4px;
         font-weight: 600;
+    }
+    &__pitchButton > a {
+        text-decoration: none;
+        color: #fff;
     }
     &__socialButtonRow {
         display: inline-flex;

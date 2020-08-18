@@ -6,12 +6,13 @@
         <div class="header__menu">
             <ul>
                 <li><a href="/team">Team</a></li>
-                <li><a href="/contact">Contact</a></li>
                 <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
-                    <div class="header__pitchButton">
-                        How to Pitch Us
-                    </div>
+                    <a href="/contact">
+                        <div class="header__pitchButton">
+                            How to Pitch Us
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -21,9 +22,6 @@
             </a>
             <a href="/team">
                 <span>Team</span>
-            </a>
-            <a href="/contact">
-                <span>Contact</span>
             </a>
             <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
                 <span>Press Kit</span>
