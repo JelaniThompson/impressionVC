@@ -4,9 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <vue-page-transition name="overlay-left-full">
+    <!-- <vue-page-transition name="overlay-left-full"> -->
       <router-view/>
-    </vue-page-transition>
+    <!-- </vue-page-transition> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   </div>
 </template>

@@ -6,7 +6,6 @@ import VuePageTransition from 'vue-page-transition';
 import VueAgile from 'vue-agile';
 
 
-
 Vue.use(VuePageTransition);
 Vue.use(VueAgile);
 
