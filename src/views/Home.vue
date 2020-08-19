@@ -61,7 +61,7 @@
                   FinTech Specialist
                 </h2>
                 <p class="home__seed-paragraph home__circle-paragraph">
-                  Our firm only backs fintech startups and has been doing so since 2013.
+                  FinTech Specialist: Our firm only backs startups that are changing the bread and butter of the financial services industry. Whether you are supporting financial transactions in credit cards or real estate, making insurance products more accessible, or helping the consumer make better financial choices, we would love to talk to you.
                 </p>
               </div>
             </div>
@@ -416,7 +416,7 @@ export default {
     width: 100%;
     position: relative;
     justify-content: center;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
   }
 
   &__investmentPolicyTitle {
@@ -472,6 +472,7 @@ export default {
     text-align: left;
     position: relative;
     margin: 0;
+    padding: 5% 0 5% 0;
     word-wrap: break-all;
     hyphens: auto;
     min-width: 300px;
