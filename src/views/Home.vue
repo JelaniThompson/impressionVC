@@ -474,7 +474,7 @@ export default {
     margin: 0;
     padding: 5% 0 5% 0;
     word-wrap: break-all;
-    hyphens: auto;
+    // hyphens: auto;
     min-width: 300px;
     white-space: inherit;
   }
