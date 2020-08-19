@@ -709,7 +709,7 @@ export default {
     color: #000;
   }
   &__networkImageContainer > img {
-    width: 23%;
+    width: 15%;
     padding: 5%;
   }
   &__footerContainer {
