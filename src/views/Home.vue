@@ -131,6 +131,7 @@
               v-for="(post, index) in selectedFundArray"
               :src="post.fields.logo.fields.file.url"
               :key="post.fields.logo.fields.file.url + '_' + index"
+              @click="openURL(post.fields.link)"
               class="home__portfolioImage"
             />
           </div>
@@ -299,6 +300,11 @@ export default {
         });
       });
       console.log(this.selectedFundArray);
+    },
+    openURL(url) {
+      // For opening the url
+      let newWindow = window.open(url, '_blank');
+      newWindow.focus();
     }
     
   },
@@ -537,6 +543,9 @@ export default {
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 4px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__pitchButton {
     align-content: center;
