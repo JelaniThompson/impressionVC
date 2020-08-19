@@ -1,16 +1,25 @@
 <template v-if="isFetching == false">
   <div class="Team">
-    <Header/>
+      <Header/>
       <div class="Team__teamContainer">
         <div class="Team__titleContainer">
-          <h1 class="Team__headerTitle">Team</h1>
+          <h1 class="Team__headerTitle">Who We Are</h1>
         </div>
           <div class="Team__coreTeamDisplayContainer">
             <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray.slice().reverse()" :key="index">
               <div class="Team__ItemAlignContainer">
-                <img :src="item.fields.headshot.fields.file.url" alt="Team Member Headshot" class="Team__coreTeamDisplayHeadshot"/>
-                <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
-                <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2>
+                <div class="Team__overlay">
+                  <img 
+                    :src="item.fields.headshot.fields.file.url"
+                    alt="Team Member Headshot"
+                    class="Team__coreTeamDisplayHeadshot"
+                    @mouseover="active(index)"
+                    @mouseleave="active(null)"
+                  />
+                  <p class="Team__bio"> {{ item.fields.bio.content[0].content[0].value }} </p>
+                </div>
+                <!-- <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
+                <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2> -->
               </div>
             </div>
           </div>
@@ -36,14 +45,10 @@ export default {
       coreArray: [],
       advisorArray: [],
       isFetching: true,
+      hover: false,
+      currentlyActive: null,
     }
   },
-  
-  // computed: {
-  //   arrayReverse() {
-  //     this.reverse();
-  //   }
-  // },
   
   beforeMount() {
     this.fetchTeam()
@@ -61,6 +66,9 @@ export default {
       })
       this.isFetching = !this.isFetching;
       console.log(this.coreArray);
+    },
+    active(index) {
+      this.currentlyActive = index;
     }
   },
 }
@@ -93,12 +101,20 @@ export default {
     min-width: 240px;
     height: 240px;
     object-fit: fill;
+    margin-left: 5%;
+    border-radius: 100%;
+    // New (for overlay)
+    // display: block;
+    // width: 100%;
+    // height: auto;
+  }
+  &__coreTeamDisplayHeadshot:hover {
+    opacity: 1;
   }
   &__coreTeamDisplayItem {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     margin-top: 29px;
-    flex: 1 0 25%;
+    // flex: 1 0 25%;
   }
   &__coreTeamDisplayName {
     text-align: left;
@@ -109,6 +125,54 @@ export default {
   }
   &__ItemAlignContainer {
     text-align: left;
+    position: relative;
+  }
+
+  &__bio {
+    align-self: center;
+    padding: 0 5% 0 5%;
+    line-height: 2;
+    font-size: 18px;
+  }
+
+  &__page-overlay {
+    position: absolute; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  
+  &__overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 29px;
+    flex: 1 0 25%;
+    border-bottom: #dedede 1px solid;
+    margin: 29px auto 0 auto;
+    width: 80%;
+    padding-bottom: 5%;
+    transition: .5s ease;
+    // background-color: #008CBA;
+  }
+
+  // &__overlay:hover {
+  //   opacity: 0.3;
+  // }
+
+  &__ItemAlignContainer {
+    &:hover {
+      &__overlay {
+        opacity: 0.3;
+      } 
+    }
   }
 
   @media (max-width: 991.98px) {

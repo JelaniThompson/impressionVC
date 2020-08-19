@@ -12,7 +12,7 @@
           <p class="home__blackTextBlockTitle">With You Each Step of the Way</p>
           <p class="home__blackTextBlockParagraph">This is about you - <b>the founders</b>. We lean in and get our hands dirty when and where you want us.</p>
         </div>
-              <!-- Trudeau Image -->
+      <!-- Trudeau Image -->
       <div class="home__carousel">
         <agile :autoplay-speed="5000" :speed="3000" autoplay>
           <div class="slide">
