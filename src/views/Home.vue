@@ -36,6 +36,12 @@
           <div class="slide">
             <img src="../assets/images/slider/Team_Owl_3.jpeg"/>
           </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Elefant.jpg"/>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Team_Zoocasa.jpg">
+          </div>
         </agile>
       </div>
       </div>
