@@ -23,7 +23,7 @@
 
         <div class="footer__pageLinks">
             <ul>
-                <li><a class="footer__footerLink" href="/team">Team</a></li>
+                <li><a class="footer__footerLink" href="/team">Who We Are</a></li>
                 <li><a class="footer__footerLink" href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <div class="footer__pitchButton">

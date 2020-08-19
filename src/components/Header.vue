@@ -21,7 +21,7 @@
                 <span>Home</span>
             </a>
             <a href="/team">
-                <span>Team</span>
+                <span>Who We Are</span>
             </a>
             <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
                 <span>Press Kit</span>
