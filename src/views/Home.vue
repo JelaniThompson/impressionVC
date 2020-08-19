@@ -416,6 +416,7 @@ export default {
     width: 100%;
     position: relative;
     justify-content: center;
+    padding-bottom: 10%;
   }
 
   &__investmentPolicyTitle {
@@ -431,16 +432,18 @@ export default {
   }
   &__contentRow {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 0px 2% 0px 2%;
   }
   &__circle-container {
     display: flex;
     flex-wrap: wrap;
+    /* position: relative; */
     justify-content: center;
     align-content: flex-start;
-    max-width: 373px;
-    margin-top: -5%;
+    max-width: 500px;
+    /* margin-top: 5%; */
     margin-left: 20px;
     margin-right: 20px;
     width: 100%;
