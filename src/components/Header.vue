@@ -5,7 +5,7 @@
         </div>
         <div class="header__menu">
             <ul>
-                <li><a href="/team">Team</a></li>
+                <li><a href="/team">Who We Are</a></li>
                 <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
                 <li>
                     <a href="/contact">
