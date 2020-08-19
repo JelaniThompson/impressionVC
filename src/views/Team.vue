@@ -9,17 +9,23 @@
             <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray.slice().reverse()" :key="index">
               <div class="Team__ItemAlignContainer">
                 <div class="Team__overlay">
-                  <img 
-                    :src="item.fields.headshot.fields.file.url"
-                    alt="Team Member Headshot"
-                    class="Team__coreTeamDisplayHeadshot"
-                    @mouseover="active(index)"
-                    @mouseleave="active(null)"
-                  />
+                  <div class="Team__imageContainer">
+                    <img 
+                      :src="item.fields.headshot.fields.file.url"
+                      alt="Team Member Headshot"
+                      class="Team__coreTeamDisplayHeadshot"
+                      @mouseover="active(index)"
+                      @mouseleave="active(null)"
+                    />
+                    <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
+                    <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2>
+                    <div class="Team__socialContainer">
+                      <img src="../assets/images/Twitter_Logo_Blue.png" alt="Impression Ventures Twitter" class="Team__twitter" width="50px" height="50px">
+                      <img src="../assets/images/linkedin.png" alt="LinkedIn Logo" class="Team__linkedin" width="30px" height="30px">
+                    </div>
+                  </div>
                   <p class="Team__bio"> {{ item.fields.bio.content[0].content[0].value }} </p>
                 </div>
-                <!-- <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
-                <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2> -->
               </div>
             </div>
           </div>
@@ -118,16 +124,21 @@ export default {
   }
   &__coreTeamDisplayName {
     text-align: left;
+    margin-top: 8%;
   }
   &__coreTeamDisplayTitle {
     text-align: left;
     font-weight: 300;
+    margin-top: 2%;
   }
   &__ItemAlignContainer {
     text-align: left;
     position: relative;
   }
-
+  &__socialContainer {
+    display: flex;
+    align-items: center;
+  }
   &__bio {
     align-self: center;
     padding: 0 5% 0 5%;
@@ -163,6 +174,7 @@ export default {
     // background-color: #008CBA;
   }
 
+
   // &__overlay:hover {
   //   opacity: 0.3;
   // }
@@ -173,6 +185,10 @@ export default {
         opacity: 0.3;
       } 
     }
+  }
+
+  &__imageContainer {
+    margin-right: 7%;
   }
 
   @media (max-width: 991.98px) {
