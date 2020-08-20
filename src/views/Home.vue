@@ -3,14 +3,14 @@
     <Header />
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <p class="home__text">We invest in <span><vue-typer erase-style='clear' :text='["game-changing FinTech companies across North America", "founders challenging \n the status quo", "leading-edge \n technology"]'></vue-typer></span></p>
+        <p class="home__text">We invest in <span><vue-typer erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
       </div>
 
       <!-- Black Text Box -->
       <div class="home__blackTextBlock">
         <div class="home__blackTextBlockTextContainer">
-          <p class="home__blackTextBlockTitle">With You Each Step of the Way</p>
-          <p class="home__blackTextBlockParagraph">This is about you - <b>the founders</b>. We lean in and get our hands dirty when and where you want us.</p>
+          <b><p class="home__blackTextBlockTitle">With You Each Step of the Way</p></b>
+          <b><p class="home__blackTextBlockParagraph">This is about you - <u>the founders</u>. We lean in and get our hands dirty when and where you want us.</p></b>
         </div>
       <!-- Trudeau Image -->
       <div class="home__carousel">
@@ -396,7 +396,7 @@ export default {
     position: relative;
     align-self: center;
     text-align: left;
-    max-width: 619px;
+    max-width: 627px;
     font-size: 24px;
     line-height: 29px;
   }
