@@ -61,7 +61,7 @@
                   FinTech Specialist
                 </h2>
                 <p class="home__seed-paragraph home__circle-paragraph">
-                  FinTech Specialist: Our firm only backs startups that are changing the bread and butter of the financial services industry. Whether you are supporting financial transactions in credit cards or real estate, making insurance products more accessible, or helping the consumer make better financial choices, we would love to talk to you.
+                  Our firm only backs startups that are changing the bread and butter of the financial services industry. Whether you are supporting financial transactions, making insurance products more accessible, or helping consumers make better financial choices, we would love to talk to you.
                 </p>
               </div>
             </div>

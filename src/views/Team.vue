@@ -6,7 +6,7 @@
           <h1 class="Team__headerTitle">Who We Are</h1>
         </div>
           <div class="Team__coreTeamDisplayContainer">
-            <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray.slice().reverse()" :key="index">
+            <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray" :key="index">
               <div class="Team__ItemAlignContainer">
                 <div class="Team__overlay">
                   <div class="Team__imageContainer">
@@ -63,7 +63,7 @@ export default {
   methods: {
     fetchTeam() {
       console.log('Fetching');
-      client.getEntries().then(entries => {
+      client.getEntries({ order: 'sys.createdAt' }).then(entries => {
         entries.items.forEach(entry => {
           if(entry.fields.coreTeam) {
             this.coreArray.push(entry)
@@ -171,13 +171,7 @@ export default {
     width: 80%;
     padding-bottom: 5%;
     transition: .5s ease;
-    // background-color: #008CBA;
   }
-
-
-  // &__overlay:hover {
-  //   opacity: 0.3;
-  // }
 
   &__ItemAlignContainer {
     &:hover {
