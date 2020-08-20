@@ -42,6 +42,12 @@
           <div class="slide">
             <img src="../assets/images/slider/Team_Zoocasa.jpg">
           </div>
+          <div class="slide">
+            <img src="../assets/images/slider/Headshot.jpg">
+          </div>
+          <div class="slide">
+            <img src="../assets/images/slider/FlexPay.jpeg">
+          </div>
         </agile>
       </div>
       </div>
