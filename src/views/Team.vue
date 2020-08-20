@@ -20,11 +20,19 @@
                     <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
                     <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2>
                     <div class="Team__socialContainer">
-                      <img src="../assets/images/Twitter_Logo_Blue.png" alt="Impression Ventures Twitter" class="Team__twitter" width="50px" height="50px">
                       <img src="../assets/images/linkedin.png" alt="LinkedIn Logo" class="Team__linkedin" width="30px" height="30px">
+                      <img src="../assets/images/Twitter_Logo_Blue.png" alt="Impression Ventures Twitter" class="Team__twitter" width="50px" height="50px">
                     </div>
                   </div>
-                  <p class="Team__bio"> {{ item.fields.bio.content[0].content[0].value }} </p>
+
+                  <p class="Team__bio">
+                    {{ item.fields.bio.content[0].content[0].value }}
+                  </p>
+                                      <!-- <template v-if="item.fields.bio.content[1]">
+                      <p class="Team__secondParagraph">
+                        {{ item.fields.bio.content[1].content[0].value }}
+                      </p>
+                    </template> -->
                 </div>
               </div>
             </div>

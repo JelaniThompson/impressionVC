@@ -95,11 +95,26 @@ a {
     }
     
     @media (min-width: 767.98px) {
-        &__burger {
-            display: none !important;
-        }
+
         .bm-burger-bars {
             background-color: white;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        &__menu > ul {
+            display: none;
+        }
+    }
+
+    @media (max-width: 806px) {
+        &__menu > ul {
+            display: none;
+        }
+    }
+    @media (min-width: 807px) {
+        &__burger {
+            display: none !important;
         }
     }
 }

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <!-- <vue-page-transition name="overlay-left-full"> -->
-    <router-view/>
-    <!-- </vue-page-transition> -->
+    <vue-page-transition name="overlay-right">
+      <router-view/>
+    </vue-page-transition>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   </div>
 </template>
