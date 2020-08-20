@@ -14,7 +14,7 @@
         </div>
       <!-- Trudeau Image -->
       <div class="home__carousel">
-        <agile :autoplay-speed="5000" :speed="3000" autoplay>
+        <agile :autoplay-speed="7000" :speed="3000" autoplay>
           <div class="slide">
             <img src="../assets/images/slider/Team_Symend.jpeg"/>
           </div>
