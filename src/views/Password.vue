@@ -15,7 +15,7 @@ export default {
         passwordRedirect() {
             console.log('triggered');
             if(document.getElementById('passwordForm').value === 'ILikeMoney') {
-                window.location.href = "http://youtube.com";
+                window.location.href = "https://drive.google.com/drive/folders/1UZPRwT-LPNBlcI3U2gFmPpisFDqrpn8p";
             }
         }
     }
