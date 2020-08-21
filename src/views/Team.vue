@@ -29,12 +29,17 @@
 
                   <p class="Team__bio">
                     {{ item.fields.bio.content[0].content[0].value }}
+                    <template v-if="item.fields.bio.content[1]">
+                        <p class="Team__secondParagraph">
+                          {{ item.fields.bio.content[1].content[0].value }}
+                        </p>
+                    </template>
+                    <template v-if="item.fields.bio.content[2]">
+                        <p class="Team__secondParagraph">
+                          {{ item.fields.bio.content[2].content[0].value }}
+                        </p>
+                    </template>
                   </p>
-                                      <!-- <template v-if="item.fields.bio.content[1]">
-                      <p class="Team__secondParagraph">
-                        {{ item.fields.bio.content[1].content[0].value }}
-                      </p>
-                    </template> -->
                 </div>
               </div>
             </div>
@@ -155,7 +160,9 @@ export default {
     line-height: 2;
     font-size: 18px;
   }
-
+  &__secondParagraph {
+    margin-top: 3%;
+  }
   &__page-overlay {
     position: absolute; /* Sit on top of the page content */
     display: none; /* Hidden by default */

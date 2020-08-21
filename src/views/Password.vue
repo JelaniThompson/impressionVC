@@ -2,7 +2,7 @@
     <div class="Password">
         <img src="../assets/images/ImpressionWordmarkLogo.png" alt="Impression Ventures Wordmark Logo" class="Password__logo" />
         <form class="Password__form" onsubmit="passwordRedirect()" v-on:submit.prevent="passwordRedirect">
-            <input type="password" name="password" id="passwordForm" placeholder="e.g. 12345678" required/>
+            <input type="password" name="password" id="passwordForm" placeholder="Enter password" required/>
         </form>
         <input type="submit" @click="passwordRedirect()">
     </div>
@@ -23,9 +23,6 @@ export default {
 </script>
 
 <style lang="scss">
-// html.js-focus-visible {
-//     background-color: red !important;
-// }
 html {
     background-color: #1867c0;
     display: flex;
