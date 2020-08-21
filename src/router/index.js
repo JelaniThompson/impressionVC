@@ -21,6 +21,11 @@ Vue.use(VueSplash)
     path: '/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/investors',
+    name: 'Investor Portal',
+    component: () => import('../views/Password.vue')
   }
 ]
 

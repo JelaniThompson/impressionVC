@@ -7,7 +7,7 @@
             <ul>
                 <li><a href="/team">Who We Are</a></li>
                 <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
-                <li><a href="/investor-portal"></a>Investor Portal</li>
+                <li><a href="/investors">Investor Portal</a></li>
                 <li>
                     <a href="/contact">
                         <div class="header__pitchButton">
@@ -26,6 +26,9 @@
             </a>
             <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
                 <span>Press Kit</span>
+            </a>
+            <a href="/investors">
+                <span>Investor Portal</span>
             </a>
         </Slide>
     </div>

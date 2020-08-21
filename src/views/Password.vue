@@ -1,9 +1,10 @@
 <template>
     <div class="Password">
         <img src="../assets/images/ImpressionWordmarkLogo.png" alt="Impression Ventures Wordmark Logo" class="Password__logo" />
-        <form action="#" class="Password__form">
-            
+        <form class="Password__form" onsubmit="passwordRedirect()" v-on:submit.prevent="passwordRedirect">
+            <input type="password" name="password" id="passwordForm" placeholder="e.g. 12345678" required/>
         </form>
+        <input type="submit" @click="passwordRedirect()">
     </div>
 </template>
 
@@ -12,13 +13,25 @@ export default {
     name: 'Password',
     methods: {
         passwordRedirect() {
-
+            console.log('triggered');
+            if(document.getElementById('passwordForm').value === 'ILikeMoney') {
+                window.location.href = "http://youtube.com";
+            }
         }
     }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+// html.js-focus-visible {
+//     background-color: red !important;
+// }
+html {
+    background-color: #1867c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .Password {
     background-color: #1965BD;
     width: 100%;
