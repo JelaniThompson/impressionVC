@@ -1,5 +1,16 @@
 <template>
   <div class="home">
+
+    <div v-if="isFetching" class="home__splashContainer">
+      <vue-splash
+        :show="true"
+        :logo="logo"
+        title="Impression Ventures"
+        :size="300"
+        :fixed="true"
+      />
+    </div>
+
     <Header />
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
@@ -215,24 +226,30 @@
 </template>
 
 <script>
-import { VueAgile } from 'vue-agile';
+import { VueAgile } from 'vue-agile'
 import { VueTyper } from 'vue-typer'
 
 import { client } from '../contentfulConfig.js'
 
 // @ is an alias to /src
-import Header from '@/components/Header.vue';
-import Footer from '@/components/Footer.vue';
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+
+import ImpressionWordmark from '../assets/images/ImpressionVenturesWordmark.png'
 
 export default {
   name: 'Home',
+  computed: {
+    logo() {
+      return ImpressionWordmark;
+    }
+  },
   components: {
     Header,
     VueTyper,
     agile: VueAgile,
     Footer
   },
-  
   data () {
     return {
       fundList: ['I', 'II', 'III'],
@@ -249,6 +266,7 @@ export default {
       },
       info: null,
       isFetching: true,
+      loading: true,
       portfolioArray: [],
       testimonialsArray: [],
       newsArray: [],
@@ -256,6 +274,10 @@ export default {
   },
       
   beforeMount() {
+    this.isFetching = true;
+    setTimeout(() => {
+      this.isFetching = false;
+    }, 5000);
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
@@ -327,8 +349,11 @@ export default {
 * {
   margin: 0;
 }
+// .vue-splash .vue-splash--fixed {
+//   background-color: #000 !important;
+//   z-index: 99 !important;
+// }
 .vue-typer {
-  
   .custom.char {
     color: #fff; 
     position: relative;

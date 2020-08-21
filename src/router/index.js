@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-// import Team from '../views/Team.vue'
+import VueSplash from 'vue-splash'
 
 Vue.use(VueRouter)
+Vue.use(VueSplash)
 
   const routes = [
   {
