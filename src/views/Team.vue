@@ -5,6 +5,8 @@
         <div class="Team__titleContainer">
           <h1 class="Team__headerTitle">Who We Are</h1>
         </div>
+        
+          <!-- Team List -->
           <div class="Team__coreTeamDisplayContainer">
             <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray" :key="index">
               <div class="Team__ItemAlignContainer">
@@ -20,13 +22,14 @@
                     <b><h2 class="Team__coreTeamDisplayName"> {{ item.fields.name }} </h2></b>
                     <h2 class="Team__coreTeamDisplayTitle"> {{ item.fields.title }} </h2>
                     <div class="Team__socialContainer">
-                      <template :v-if="item.fields.linkedin && item.fields.twitter">
+                      <template v-if="item.fields.linkedin && item.fields.twitter">
                         <a :href="item.fields.linkedin" target="_blank"><img src="../assets/images/linkedin.png" alt="LinkedIn Logo" class="Team__linkedin" width="30px" height="30px"></a>
                         <a :href="item.fields.twitter" target="_blank"><img src="../assets/images/Twitter_Logo_Blue.png" alt="Impression Ventures Twitter" class="Team__twitter" width="50px" height="50px"></a>
                       </template>
                     </div>
                   </div>
 
+                  <!-- Bio Text -->
                   <p class="Team__bio">
                     {{ item.fields.bio.content[0].content[0].value }}
                     <template v-if="item.fields.bio.content[1]">
@@ -40,6 +43,7 @@
                         </p>
                     </template>
                   </p>
+
                 </div>
               </div>
             </div>

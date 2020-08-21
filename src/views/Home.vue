@@ -367,7 +367,7 @@ export default {
     justify-content: center;
     background-color: #000;
     // padding: 5% 0 5% 0;
-    min-height: 720px;
+    min-height: 860px;
     width: 100%;
     left: 0;
     position: relative; // For text inside of it
