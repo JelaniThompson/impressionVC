@@ -20,47 +20,11 @@
       <!-- Black Text Box -->
       <div class="home__blackTextBlock">
         <div class="home__blackTextBlockTextContainer">
-          <b><p class="home__blackTextBlockTitle">With You Each Step of the Way</p></b>
-          <b><p class="home__blackTextBlockParagraph">This is about you - <u>the founders</u>. We lean in and get our hands dirty when and where you want us.</p></b>
-        </div>
-      <!-- Trudeau Image -->
-      <div class="home__carousel">
-        <agile :autoplay-speed="7000" :speed="3000" autoplay>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Symend.jpeg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Goose_2.jpg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Sensibill.jpeg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Avesdo.jpg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Brim.jpg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Wealthsimple.jpg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Owl_3.jpeg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Elefant.jpg"/>
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Team_Zoocasa.jpg">
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/Headshot.jpg">
-          </div>
-          <div class="slide">
-            <img src="../assets/images/slider/FlexPay.jpeg">
-          </div>
-        </agile>
+          <!-- <b><p class="home__blackTextBlockTitle">With You Each Step of the Way</p></b> -->
+          <!-- <b><p class="home__blackTextBlockParagraph">This is about you - <u>the founders</u>. We lean in and get our hands dirty when and where you want us.</p></b> -->
+          <img src="@/assets/images/WithYouEachStep.png" alt="With You Each Step of the Way" class="home__withYou">
       </div>
+
       </div>
       
 
@@ -402,7 +366,8 @@ export default {
     align-items: center;
     justify-content: center;
     background-color: #000;
-    padding: 5% 0 5% 0;
+    // padding: 5% 0 5% 0;
+    min-height: 720px;
     width: 100%;
     left: 0;
     position: relative; // For text inside of it
@@ -424,6 +389,10 @@ export default {
     max-width: 627px;
     font-size: 24px;
     line-height: 29px;
+  }
+  &__withYou {
+    width: 60%;
+    align-self: center;
   }
   &__carousel {
     width: 50%;
@@ -713,7 +682,7 @@ export default {
 
   &__blackTextBlockTextContainer {
     width: 100%;
-    margin: 3% auto -3% auto;
+    // margin: 3% auto -3% auto;
   }
 
   &__blackTextBlockParagraph {
