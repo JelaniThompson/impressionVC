@@ -333,7 +333,7 @@ export default {
   display: none;
 } 
 .agile__slide {
-  margin-top: 2%;
+  margin-top: 0.5%;
 }
 .home {
   display: flex;
