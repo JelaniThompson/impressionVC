@@ -618,7 +618,7 @@ export default {
     flex-wrap: wrap;
     background-color: #fff;
     color: #000;
-    min-height: 300px;
+    padding-bottom: 3%;
     width: 100%;
     position: relative;
   }

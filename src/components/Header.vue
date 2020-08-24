@@ -25,14 +25,19 @@
             <a href="/team">
                 <span>Who We Are</span>
             </a>
-            <a href="https://medium.com/@impressionvc">
-                <span>Blog</span>
-            </a>
             <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
                 <span>Press Kit</span>
             </a>
+            <a href="https://medium.com/@impressionvc">
+                <span>Blog</span>
+            </a>
             <a href="/investors">
                 <span>Investor Portal</span>
+            </a>
+            <a href="/contact">
+                <div class="header__pitchButton">
+                    How to Pitch Us
+                </div>
             </a>
         </Slide>
     </div>

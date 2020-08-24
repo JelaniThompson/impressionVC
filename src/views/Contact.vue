@@ -75,5 +75,13 @@ ul > li {
   &__mailLink {
     text-decoration: none;
   }
+  @media (max-width: 575.98px) {
+    li {
+      font-size: 1em;
+    }
+    &__pitchContainer {
+      padding: 25px !important;
+    }
+  }    
 }
 </style>
