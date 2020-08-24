@@ -206,6 +206,12 @@ export default {
     margin-right: 7%;
   }
 
+  @media (max-width: 575.98px) {
+    &__overlay {
+      flex-wrap: wrap;
+    }
+  }
+
   @media (max-width: 991.98px) {
     &__coreTeamDisplayHeadshot {
       min-width: 180px;
