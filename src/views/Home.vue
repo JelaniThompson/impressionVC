@@ -340,11 +340,14 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   &__heroImage {
-    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    // object-fit: cover;
     max-width: 100%;
   }
   &__textContainer {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
@@ -544,7 +547,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     align-self: center;
-    justify-content: center;
+    justify-content: center;  
     margin-top: 5%;
   }
   &__portfolioImage {
@@ -553,6 +556,7 @@ export default {
     margin-left: 30px;
     margin-right: 30px;
     border-radius: 4px;
+    padding: 10px;
     &:hover {
       cursor: pointer;
     }
@@ -700,7 +704,7 @@ export default {
   &__networkContainer {
     flex-wrap: wrap;
     background-color: #fff;
-    min-height: 720px;
+    // min-height: 720px;
     width: 100%;
     position: relative;
     justify-content: center;
