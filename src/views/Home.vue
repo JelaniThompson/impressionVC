@@ -899,6 +899,11 @@ export default {
     &__circle-paragraph {
       margin-top: 4%;
     }
+    &__text {
+      font-size: 2.5em;
+      width: 86%;
+      margin: 0;
+    }
     &__pitchButton {
       margin: 68px auto 68px auto;
     }
