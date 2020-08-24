@@ -161,7 +161,7 @@
               <div class="home__storyLink">
                 <h3 class="home__newsDate">{{ item.fields.date }}</h3>
                 <h1 class="home__newsStoryTitle">{{ item.fields.title }}</h1>
-                <p class="home__readMore">Read More<img class="home__rightArrow" src="../assets/images/arrow-right.png" alt="Right Arrow"/></p>
+                <p class="home__readMore"><a :href="item.fields.link" target="_blank">Read More</a><img class="home__rightArrow" src="../assets/images/arrow-right.png" alt="Right Arrow"/></p>
               </div>
             </div>
           </div>
@@ -313,10 +313,6 @@ export default {
 * {
   margin: 0;
 }
-// .vue-splash .vue-splash--fixed {
-//   background-color: #000 !important;
-//   z-index: 99 !important;
-// }
 .vue-typer {
   .custom.char {
     color: #fff; 
@@ -669,12 +665,20 @@ export default {
   &__readMore {
     align-self: flex-start;
     width: 50%;
+    text-decoration: none;
     text-align: left;
-    color: #1965BD;
     font-weight: 500;
     font-size: 18px;
     border-bottom: 1px solid #000;
     margin-top: 1.5%;
+  }
+
+  &__readMore > a {
+    text-decoration: none;
+    color: #1965BD;
+    &:visited {
+      color: #1965BD;
+    }
   }
 
   &__newsDate {
@@ -823,6 +827,7 @@ export default {
     }
     &__readMore {
       width: 100%;
+      text-decoration: none;
     }
   }
 
