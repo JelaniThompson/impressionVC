@@ -62,8 +62,11 @@ a {
     list-style: none;
 }
 
-.bm-burger-bars {
-    color: #fff;
+&__burger {
+    .bm-burger-bars {
+        color: #fff;
+        z-index: 99;
+    }
 }
 
 .header {
