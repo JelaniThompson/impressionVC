@@ -7,6 +7,7 @@
             <ul>
                 <li><a href="/team">Who We Are</a></li>
                 <li><a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0" target="_blank">Press Kit</a></li>
+                <li><a href="https://medium.com/@impressionvc" target="_blank">Blog</a></li>
                 <li><a href="/investors">Investor Portal</a></li>
                 <li>
                     <a href="/contact">
@@ -23,6 +24,9 @@
             </a>
             <a href="/team">
                 <span>Who We Are</span>
+            </a>
+            <a href="https://medium.com/@impressionvc">
+                <span>Blog</span>
             </a>
             <a href="https://www.dropbox.com/sh/5cw89k78yzs4yv7/AAAkmgFnIkWkVtpmXaSM9Ffxa?dl=0">
                 <span>Press Kit</span>
