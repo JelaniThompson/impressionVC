@@ -778,8 +778,19 @@ export default {
       width: 400px;
       height: 400px;
     }
+    &__fundItem {
+      font-size: 1.3em;
+      padding: 0 6% 0 6%;
+    }
     &__text {
-      font-size: 2em;
+      font-size: 1em !important;
+      width: 76%;
+    }
+    &__withYou {
+      width: 100%;
+    }
+    &__blackTextBlock {
+      min-height: 500px;
     }
     &__portfolioImageContainer > &__portfolioImage {
       width: 120px;
@@ -789,6 +800,9 @@ export default {
     &__contentContainer {
       flex-wrap: wrap;
       flex-direction: column-reverse;
+    }
+    &__sliderContainer {
+      padding-bottom: 15%;
     }
     &__sliderImage {
       margin: 0 auto !important;
@@ -817,6 +831,7 @@ export default {
     &__newsStoryTitle {
       margin: 0 auto;
       width: 100%;
+      font-size: 1.5em;
     }
     &__storyLink {
       width: 80%;
@@ -824,6 +839,10 @@ export default {
     }
     &__networkContainer {
       min-height: 0;
+    }
+    &__pitchButton {
+      width: 67% !important;
+      margin-top: 18px 0 18px 0 !important;
     }
     &__readMore {
       width: 100%;
