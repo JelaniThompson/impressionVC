@@ -778,9 +778,11 @@ export default {
       width: 400px;
       height: 400px;
     }
+    &__fundFilter {
+      justify-content: space-evenly;
+    }
     &__fundItem {
       font-size: 1.3em;
-      padding: 0 6% 0 6%;
     }
     &__text {
       font-size: 1em !important;
@@ -788,9 +790,6 @@ export default {
     }
     &__withYou {
       width: 100%;
-    }
-    &__fundFilter {
-      justify-content: space-evenly;
     }
     &__blackTextBlock {
       min-height: 500px;
