@@ -789,6 +789,9 @@ export default {
     &__withYou {
       width: 100%;
     }
+    &__fundFilter {
+      justify-content: space-evenly;
+    }
     &__blackTextBlock {
       min-height: 500px;
     }
