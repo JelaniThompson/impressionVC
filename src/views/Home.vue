@@ -99,7 +99,7 @@
           <h1 class="home__portfolioTitle">Portfolio</h1>
           <div class="home__fundFilter">
             <!-- Use a guard expression for conditional rendering -->
-            <div class="home__fundItem home__all">All</div>
+            <div class="home__fundItem home__all">All |</div>
             <div
               v-for="(item, index) in fundList"
               class="home__fundListing home__fundItem"
@@ -107,7 +107,7 @@
               @click="updateFund(index + 1)"
               :key="item"
             >
-            Fund {{ item }}
+            &nbsp; Fund {{ item }} | &nbsp;
             </div>
             <div class="home__fundItem home__exits">Exits</div>
           </div>
@@ -501,7 +501,7 @@ export default {
   }
   &__fundFilter {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 499px;
     width: 100%;
     white-space: nowrap;
@@ -512,17 +512,11 @@ export default {
     font-size: 32px;
     font-weight: 500;
     line-height: 39px;
+    // margin-left: 1.5%;
+    padding: 0 1.5% 0 1.5%;
     &:hover {
       cursor: pointer;
     }
-  }
-
-  &__all {
-    margin-right: 2%;
-  }
-
-  &__exits {
-    margin-left: 2%;
   }
   
   &__fundListing-FundI--isSelected {

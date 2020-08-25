@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <a href="/"><img src="@/assets/header/HeaderLogo.png" alt="Impression Ventures Logo" class="header__logo"></a>
+            <a href="/"><img src="@/assets/header/ImpressionWordmark.png" alt="Impression Ventures Logo" class="header__logo"></a>
         </div>
         <div class="header__menu">
             <ul>
@@ -87,6 +87,7 @@ header {
         align-self: center;
         margin-right: auto;
         margin-left: 10%;
+        max-width: 230px;
     }
     &__menu > ul {
         color: #fff;
@@ -105,14 +106,16 @@ header {
         font-weight: 600;
     }
 
-    @media screen and (min-width: 414px) and (max-width: 450px) {
+    @media screen and (min-width: 411px) and (max-width: 450px) {
         &__menu > ul {
             display: none;
         }    
+        &__logo {
+            margin-left: 6%;
+        }
     }
     
     @media (min-width: 767.98px) {
-
         .bm-burger-bars {
             background-color: white;
         }

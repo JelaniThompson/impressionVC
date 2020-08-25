@@ -51,4 +51,10 @@ html {
     height: 100%;
     min-height: 600px;
 }
+
+    @media (max-width: 991.98px) {
+        html {
+            background-color: #1867c0;
+        }
+    }
 </style>

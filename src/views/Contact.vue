@@ -82,6 +82,12 @@ ul > li {
     &__pitchContainer {
       padding: 25px !important;
     }
-  }    
+  }
+
+  @media (max-width: 991.98px) {
+    &__pitchContainer {
+      padding: 25px !important;
+    }
+  }
 }
 </style>
