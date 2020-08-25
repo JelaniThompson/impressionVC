@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 li {
-  font-size: 24px;
+  font-size: 18px;
   text-align: left;
   margin-top: 12px;
 }

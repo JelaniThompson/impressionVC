@@ -30,7 +30,7 @@
 
       <!-- Investment Policy -->
       <div class="home__investmentPolicyContainer">
-        <h1 class="home__investmentPolicyTitle">Investment Policy</h1>
+        <h1 class="home__investmentPolicyTitle">What We Invest In</h1>
         <div class="home__investPolicyNumberGroup">
           <div class="home__contentRow">
             <div class="home__circle-container">
@@ -99,7 +99,8 @@
           <h1 class="home__portfolioTitle">Portfolio</h1>
           <div class="home__fundFilter">
             <!-- Use a guard expression for conditional rendering -->
-            <div 
+            <div class="home__fundItem home__all">All</div>
+            <div
               v-for="(item, index) in fundList"
               class="home__fundListing home__fundItem"
               :class="fundSelected && fundSelected"
@@ -108,6 +109,7 @@
             >
             Fund {{ item }}
             </div>
+            <div class="home__fundItem home__exits">Exits</div>
           </div>
       </template>
 
@@ -514,6 +516,14 @@ export default {
       cursor: pointer;
     }
   }
+
+  &__all {
+    margin-right: 2%;
+  }
+
+  &__exits {
+    margin-left: 2%;
+  }
   
   &__fundListing-FundI--isSelected {
     color: #1965BD;
@@ -898,6 +908,9 @@ export default {
     }
     &__circle-paragraph {
       margin-top: 4%;
+    }
+    &__withYou {
+      width: 80% !important;
     }
     &__text {
       font-size: 2.5em;

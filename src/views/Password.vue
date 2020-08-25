@@ -1,14 +1,23 @@
 <template>
-    <div class="Password">
-        <img src="../assets/images/ImpressionWordmarkLogo.png" alt="Impression Ventures Wordmark Logo" class="Password__logo" />
-        <form class="Password__form" onsubmit="passwordRedirect()" v-on:submit.prevent="passwordRedirect">
-            <input type="password" name="password" id="passwordForm" placeholder="Enter password" required/>
-        </form>
-        <input type="submit" @click="passwordRedirect()">
+    <div class="container">
+        <Header />
+        <div class="Password">
+            <div class="Password__contentContainer">
+                <img src="../assets/images/ImpressionWordmarkLogo.png" alt="Impression Ventures Wordmark Logo" class="Password__logo" />
+                <form class="Password__form" onsubmit="passwordRedirect()" v-on:submit.prevent="passwordRedirect">
+                    <input type="password" name="password" id="passwordForm" placeholder="Enter password" required/>
+                </form>
+                <input type="submit" @click="passwordRedirect()">
+            </div>
+        </div>
+        <Footer />
     </div>
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+
 export default {
     name: 'Password',
     methods: {
@@ -18,20 +27,28 @@ export default {
                 window.location.href = "https://drive.google.com/drive/folders/1UZPRwT-LPNBlcI3U2gFmPpisFDqrpn8p";
             }
         }
+    },
+    components: {
+        Header,
+        Footer
     }
 }
 </script>
 
 <style lang="scss">
 html {
-    background-color: #1867c0;
-    display: flex;
+    // background-color: #1867c0;
+    // display: flex;
     justify-content: center;
     align-items: center;
 }
 .Password {
     background-color: #1965BD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
+    min-height: 600px;
 }
 </style>

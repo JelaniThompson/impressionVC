@@ -62,11 +62,13 @@ a {
     list-style: none;
 }
 
+header {
 &__burger {
     .bm-burger-bars {
         color: #fff;
         z-index: 99;
     }
+}
 }
 
 .header {

@@ -16,7 +16,7 @@
             <div class="footer__email">
                 <div class="footer__emailText">
                     <img src="@/assets/images/email-icon.png" alt="Impression Ventures Email" class="footer__emailIcon"/>
-                    (info) @ impression.ventures
+                    info@impression.ventures
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@ export default {
     max-height: 185px;
     height: 500px;
     width: 100vw;
-    background-color: #1965BD;
+    background-color: #000;
     position: relative;
     &__addressHomeContainer {
         display: flex;
@@ -119,7 +119,7 @@ export default {
         margin: 0 20px 0 20px;
     }
     &__pitchButton {
-        background-color: #000;
+        background-color: #1965BD;
         padding: 18px;
         border-radius: 4px;
         font-weight: 600;
