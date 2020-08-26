@@ -326,6 +326,10 @@ export default {
 
 [v-cloak] { display: none } /* Hide elements with v-cloak until done loading */
 
+[v-cloak].home__text {
+  display: none;
+}
+
 .vue-typer {
   .custom.char {
     color: #fff; 
