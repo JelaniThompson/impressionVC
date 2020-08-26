@@ -106,6 +106,21 @@ header {
         font-weight: 600;
     }
 
+    @media (max-width: 359px) {
+        .bm-burger-button {
+            position: relative !important;
+            top: 0 !important;
+            margin-top: -15%;
+        }
+
+        &__logo {
+            margin-right: 40%;
+            // width: 100px;
+            width: 187px !important;
+        }
+
+    }
+
     @media screen and (min-width: 411px) and (max-width: 450px) {
         &__menu > ul {
             display: none;
@@ -114,7 +129,7 @@ header {
             margin-left: 6%;
         }
     }
-    
+
     @media (min-width: 767.98px) {
         .bm-burger-bars {
             background-color: white;

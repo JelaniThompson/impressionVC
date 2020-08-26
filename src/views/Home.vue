@@ -741,6 +741,22 @@ export default {
   }
 
   // Responsive shiz http://devfacts.com/media-queries-breakpoints-2020/
+
+  @media (max-width: 359px) {
+    &__investmentPolicyTitle {
+      font-size: 1.5em;
+    }
+    &__circle-header {
+      font-size: 1em;
+    }
+    &__withYou {
+      width: 85% !important;
+    }
+    &__fundItem {
+      font-size: 0.8em !important;
+    }
+  }
+  
   @media screen and (min-width: 414px) and (max-width: 450px) {
     .slide > img {
       width: 250px !important;
@@ -858,6 +874,8 @@ export default {
       text-decoration: none;
     }
   }
+
+
   
   @media (min-width: 575.98px) and (max-width: 650px) {
     &__featuredTitle {
