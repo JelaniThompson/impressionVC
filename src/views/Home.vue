@@ -958,6 +958,10 @@ export default {
     &__contentContainer {
       padding: 0 5% 0 5%;
     }
+    &__text {
+      width: 78%;
+      font-size: 2.5em;
+    }
   }
 }
 </style>
