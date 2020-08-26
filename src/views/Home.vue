@@ -1,16 +1,19 @@
 <template>
 
   <div class="home">
-      <loading :active.sync="isFetching" 
-        :can-cancel="false" 
-        :on-cancel="onCancel"
-        :is-full-page="fullPage">
-      </loading>
+      <div>
+        <!-- <loading :active.sync="pageLoading" 
+          :can-cancel="false" 
+          :on-cancel="onCancel"
+          :is-full-page="fullPage"
+          >
+        </loading> -->
+      </div>
     <Header />
      
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <p class="home__text">We invest in <span><vue-typer erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
+        <p class="home__text">We invest in <span><vue-typer v-cloak erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
       </div>
 
       <!-- Black Text Box -->
@@ -201,7 +204,7 @@ import Footer from '@/components/Footer.vue'
 import ImpressionWordmark from '../assets/images/ImpressionVenturesWordmark.png'
 
 // Import component
-import Loading from 'vue-loading-overlay';
+// import Loading from 'vue-loading-overlay';
 // Import stylesheet
 import 'vue-loading-overlay/dist/vue-loading.css';
 
@@ -214,7 +217,7 @@ export default {
   },
   components: {
     Header,
-    Loading,
+    // Loading,
     VueTyper,
     agile: VueAgile,
     Footer
@@ -234,7 +237,8 @@ export default {
         // any options from Flickity can be used
       },
       info: null,
-      isFetching: false,
+      pageLoading: true,
+      isFetching: true,
       loading: true,
       portfolioArray: [],
       testimonialsArray: [],
@@ -246,7 +250,8 @@ export default {
     this.isFetching = true;
     setTimeout(() => {
       this.isFetching = false;
-    }, 5000);
+      this.pageLoading = false;
+    }, 1500);
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
@@ -318,6 +323,9 @@ export default {
 * {
   margin: 0;
 }
+
+[v-cloak] { display: none } /* Hide elements with v-cloak until done loading */
+
 .vue-typer {
   .custom.char {
     color: #fff; 
