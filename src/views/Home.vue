@@ -157,8 +157,9 @@
         <h1 class="home__featuredTitle">
           Featured
         </h1>
-        <div v-for="(item, index) in newsArray" :key="index" class="home__newsSection">
+        
           <div class="home__newsContainer">
+            <div v-for="(item, index) in newsArray" :key="index" class="home__newsSection">
             <div class="home__newsItemContainer">
               <div class="home__storyLink">
                 <h3 class="home__newsDate">{{ item.fields.date }}</h3>
@@ -659,6 +660,7 @@ export default {
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: column;
+    max-width: 1488.48px;
     margin-top: -30%;
     margin-bottom: 3%;
     &:nth-of-type(1) {
