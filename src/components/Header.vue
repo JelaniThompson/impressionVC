@@ -132,10 +132,24 @@ header {
             display: none;
         }
     }
-    @media (min-width: 807px) {
-        &__burger {
-            display: none !important;
-        }
-    }
+    // @media (min-width: 807px) {
+    //     &__burger {
+    //         display: none !important;
+    //         visibility: hidden;
+    //     }
+    // }
+
+    /* iPad Pro */
+  @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+      &__menu > ul {
+          display: none;
+      }
+  }
+
+  @media (min-width: 1200px) {
+      &__burger {
+          display: none;
+      }
+  }
 }
 </style>

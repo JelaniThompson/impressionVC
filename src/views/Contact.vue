@@ -89,5 +89,19 @@ ul > li {
       padding: 25px !important;
     }
   }
+
+  /* iPad Pro */
+  @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    &__pitchContainer {
+      padding: 25px !important;
+      margin-top: 15%;
+    }
+    &__list {
+      margin-top: 3%;
+    }
+    li {
+      font-size: 1.8em;
+    }
+  }
 }
 </style>

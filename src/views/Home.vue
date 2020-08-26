@@ -953,5 +953,11 @@ export default {
       margin-bottom: 3.5%;
     }
   }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    &__contentContainer {
+      padding: 0 5% 0 5%;
+    }
+  }
 }
 </style>

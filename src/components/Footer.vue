@@ -28,7 +28,7 @@
                 <li>
                     <div class="footer__pitchButton">
                         <a href="/contact">
-                            Send Us Your Pitch Deck
+                            How to Pitch Us
                         </a>
                     </div>
                 </li>
@@ -193,6 +193,9 @@ export default {
         }
     }
     @media (max-width: 1023px) {
+        display: none;
+    }
+    @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
         display: none;
     }
 }
