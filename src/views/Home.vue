@@ -1,17 +1,13 @@
 <template>
+
   <div class="home">
-
-    <div v-if="isFetching" class="home__splashContainer">
-      <vue-splash
-        :show="true"
-        :logo="logo"
-        title="Impression Ventures"
-        :size="300"
-        :fixed="true"
-      />
-    </div>
-
+      <loading :active.sync="isFetching" 
+        :can-cancel="false" 
+        :on-cancel="onCancel"
+        :is-full-page="fullPage">
+      </loading>
     <Header />
+     
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
         <p class="home__text">We invest in <span><vue-typer erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
@@ -204,6 +200,11 @@ import Footer from '@/components/Footer.vue'
 
 import ImpressionWordmark from '../assets/images/ImpressionVenturesWordmark.png'
 
+// Import component
+import Loading from 'vue-loading-overlay';
+// Import stylesheet
+import 'vue-loading-overlay/dist/vue-loading.css';
+
 export default {
   name: 'Home',
   computed: {
@@ -213,6 +214,7 @@ export default {
   },
   components: {
     Header,
+    Loading,
     VueTyper,
     agile: VueAgile,
     Footer
@@ -232,7 +234,7 @@ export default {
         // any options from Flickity can be used
       },
       info: null,
-      isFetching: true,
+      isFetching: false,
       loading: true,
       portfolioArray: [],
       testimonialsArray: [],
