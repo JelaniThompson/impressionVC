@@ -660,8 +660,9 @@ export default {
     flex-wrap: wrap;
     align-content: flex-end;
     flex-direction: column;
-    max-width: 1488.48px;
-    margin-top: -30%;
+    // max-width: 1488.48px;
+    // max-width: 80%;
+    // margin-top: -30%;
     margin-bottom: 3%;
     &:nth-of-type(1) {
       margin-top: 1%;
@@ -855,6 +856,12 @@ export default {
     &__readMore {
       width: 100%;
       text-decoration: none;
+    }
+  }
+  
+  @media (min-width: 575.98px) and (max-width: 650px) {
+    &__featuredTitle {
+      visibility: hidden;
     }
   }
 

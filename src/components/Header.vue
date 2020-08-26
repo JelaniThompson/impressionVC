@@ -145,11 +145,23 @@ header {
     }
   }
 
-  @media (min-width: 864px) {
-      &__burger {
-          visibility: hidden;
-      }
-  }
+//   @media (min-width: 864px) {
+//       &__burger {
+//           visibility: hidden;
+//       }
+//   }
+
+    @media (min-width: 863px) and (max-width: 1087px) {
+        &__menu > ul {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1088px) and (max-width: 1199px) {
+        &__burger {
+            display: none;
+        }
+    }
   
     /* iPad Pro */
   @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
