@@ -13,7 +13,9 @@
      
       <div class="home__textContainer">
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <p class="home__text">We invest in <span><vue-typer v-cloak erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
+        <template v-if="isFetching == false">
+          <p class="home__text">We invest in <span><vue-typer v-cloak erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
+        </template>
       </div>
 
       <!-- Black Text Box -->
