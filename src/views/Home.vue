@@ -753,7 +753,8 @@ export default {
       width: 85% !important;
     }
     &__fundItem {
-      font-size: 0.8em !important;
+      font-size: 0.9em !important;
+      padding: 0 1.5% 0 0.5% !important;
     }
   }
   
