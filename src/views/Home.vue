@@ -10,13 +10,12 @@
         </loading> -->
       </div>
     <Header />
-     
-      <div class="home__textContainer">
+      <template v-if="isFetching == false">
+      <div class="home__textContainer">  
         <img class="home__heroImage" src="../assets/images/TorontoBlue2.png">
-        <template v-if="isFetching == false">
           <p class="home__text">We invest in <span><vue-typer v-cloak erase-style='clear' :text='["game-changing fintech companies across North America", "fintech founders \n challenging the status quo", "leading fintech \n technology"]'></vue-typer></span></p>
-        </template>
       </div>
+      </template>
 
       <!-- Black Text Box -->
       <div class="home__blackTextBlock">
@@ -253,7 +252,7 @@ export default {
     setTimeout(() => {
       this.isFetching = false;
       this.pageLoading = false;
-    }, 1500);
+    }, 3000);
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
