@@ -110,7 +110,6 @@ header {
         .bm-burger-button {
             position: relative !important;
             top: 0 !important;
-            margin-top: -15%;
         }
 
         &__logo {

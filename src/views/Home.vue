@@ -2,12 +2,13 @@
 
   <div class="home">
       <div>
-        <!-- <loading :active.sync="pageLoading" 
+        <loading
+          :active="pageLoading && cookiesAlive" 
           :can-cancel="false" 
           :on-cancel="onCancel"
           :is-full-page="fullPage"
-          >
-        </loading> -->
+        >
+        </loading>
       </div>
     <Header />
       <template v-if="isFetching == false" v-cloak>
@@ -205,7 +206,7 @@ import Footer from '@/components/Footer.vue'
 import ImpressionWordmark from '../assets/images/ImpressionVenturesWordmark.png'
 
 // Import component
-// import Loading from 'vue-loading-overlay';
+import Loading from 'vue-loading-overlay';
 // Import stylesheet
 import 'vue-loading-overlay/dist/vue-loading.css';
 
@@ -218,7 +219,7 @@ export default {
   },
   components: {
     Header,
-    // Loading,
+    Loading,
     VueTyper,
     agile: VueAgile,
     Footer
@@ -240,6 +241,7 @@ export default {
       info: null,
       pageLoading: true,
       isFetching: true,
+      cookiesAlive: true,
       loading: true,
       portfolioArray: [],
       testimonialsArray: [],
@@ -253,10 +255,17 @@ export default {
       this.isFetching = false;
       this.pageLoading = false;
     }, 3000);
+
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
     this.updateFund(1);
+  },
+
+  mounted() {
+    if (this.$cookies.isKey('loading-overlay') == false) {
+      this.cookiesAlive == false;
+    }
   },
 
   methods: {
