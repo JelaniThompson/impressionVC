@@ -104,7 +104,7 @@
           <h1 class="home__portfolioTitle">Portfolio</h1>
           <div class="home__fundFilter">
             <!-- Use a guard expression for conditional rendering -->
-            <div class="home__fundItem home__all">All |</div>
+            <div class="home__fundItem home__all" @click="showAll()">All |</div>
             <div
               v-for="(item, index) in fundList"
               class="home__fundListing home__fundItem"
@@ -267,7 +267,8 @@ export default {
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
-    this.updateFund(1);
+    this.showAll();
+    // this.updateFund(1);
   },
 
   // mounted() {
@@ -306,7 +307,7 @@ export default {
       console.log(this.testimonialsArray);
       // this.posts.fields.image and .name and .quoteIx
     },
-    getNews() {
+    getNews() { 
       client.getEntries().then(entries => {
         entries.items.forEach(entry => {
           if (entry.fields.date) {
@@ -316,6 +317,7 @@ export default {
       });
       console.log(this.newsArray);
     },
+    // Update fund to display when tag is clicked
     updateFund(fund) {
       this.selectedFundArray = [];
       client.getEntries().then(entries => {
@@ -326,6 +328,16 @@ export default {
         });
       });
       console.log(this.selectedFundArray);
+    },
+    showAll() {
+      this.selectedFundArray = [];
+      client.getEntries().then(entries => {
+        entries.items.forEach(entry => {
+          if (entry.fields.fundNumber == 1 || entry.fields.fundNumber == 2 || entry.fields.fundNumber == 3 || entry.fields.fundNumber == 4) {
+            this.selectedFundArray.push(entry);
+            }
+        });
+      });
     },
     openURL(url) {
       // For opening the url

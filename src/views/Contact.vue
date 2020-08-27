@@ -108,7 +108,7 @@ ul > li {
       min-height: 1300px;
     }
     li {
-      font-size: 3em;
+      font-size: 2.5em;
       &:first-of-type {
         margin-top: 3%;
       }
