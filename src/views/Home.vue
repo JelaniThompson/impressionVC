@@ -2,10 +2,14 @@
   <div class="home">
     <!-- Implement cookie to check if user's first visit -->
     <loading
-      :active.sync="cookiesAlive" 
-      :can-cancel="false" 
+      :active.sync="pageLoading" 
+      :can-cancel="true" 
       :on-cancel="onCancel"
       :is-full-page="fullPage"
+      :opacity="1.0"
+      :transition="'transition: opacity .5s;'"
+      :color="'#1965BD'"
+      :background-color="'#000'"
     >
     </loading>
     <Header />
