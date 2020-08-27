@@ -1,6 +1,7 @@
 <template>
 
   <div class="home">
+    <template v-if="this.$cookies.isKey('loading-overlay') == false">
       <div>
         <loading
           :active="pageLoading && cookiesAlive" 
@@ -10,6 +11,7 @@
         >
         </loading>
       </div>
+    </template>
     <Header />
       <template v-if="isFetching == false" v-cloak>
       <div class="home__textContainer">  
