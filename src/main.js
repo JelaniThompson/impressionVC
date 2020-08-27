@@ -12,7 +12,7 @@ Vue.use(VueAgile)
 Vue.use(require('vue-cookies'))
 
 Vue.$cookies.config('7d')
-Vue.$cookies.set("loading-overlay","firstVisit","10s");
+Vue.$cookies.set("loading-overlay", "firstVisit", "10s");
 
 Vue.$cookies.isKey('loading-overlay')
 console.log(Vue.$cookies.isKey('loading-overlay'))

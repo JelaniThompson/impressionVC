@@ -1,17 +1,13 @@
 <template>
-
   <div class="home">
-    <template v-if="this.$cookies.isKey('loading-overlay') == false">
-      <div>
-        <loading
-          :active="pageLoading && cookiesAlive" 
-          :can-cancel="false" 
-          :on-cancel="onCancel"
-          :is-full-page="fullPage"
-        >
-        </loading>
-      </div>
-    </template>
+    <!-- Implement cookie to check if user's first visit -->
+    <loading
+      :active.sync="cookiesAlive" 
+      :can-cancel="false" 
+      :on-cancel="onCancel"
+      :is-full-page="fullPage"
+    >
+    </loading>
     <Header />
       <template v-if="isFetching == false" v-cloak>
       <div class="home__textContainer">  
@@ -258,17 +254,21 @@ export default {
       this.pageLoading = false;
     }, 3000);
 
+    if (this.$cookies.get('loading-overlay') == null) {
+      this.cookiesAlive == false;
+    }
+
     this.getPortfolioCompany();
     this.getTestimonials();
     this.getNews();
     this.updateFund(1);
   },
 
-  mounted() {
-    if (this.$cookies.isKey('loading-overlay') == false) {
-      this.cookiesAlive == false;
-    }
-  },
+  // mounted() {
+  //   if (this.$cookies.isKey('loading-overlay') == false) {
+  //     this.cookiesAlive == false;
+  //   }
+  // },
 
   methods: {
     next() {
@@ -357,9 +357,9 @@ export default {
 .agile__actions {
   display: none;
 } 
-.agile__slide {
-  margin-top: 0.5%;
-}
+// .agile__slide {
+// //   margin-top: 0.5%;
+// }
 .home {
   display: flex;
   justify-content: center;
