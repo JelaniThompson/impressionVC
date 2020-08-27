@@ -258,7 +258,7 @@ export default {
     setTimeout(() => {
       this.isFetching = false;
       this.pageLoading = false;
-    }, 3000);
+    }, 3500);
 
     if (this.$cookies.get('loading-overlay') == null) {
       this.cookiesAlive == false;

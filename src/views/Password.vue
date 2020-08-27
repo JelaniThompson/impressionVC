@@ -52,9 +52,15 @@ html {
     min-height: 600px;
 }
 
-    @media (max-width: 991.98px) {
-        html {
-            background-color: #1867c0;
-        }
+@media (max-width: 991.98px) {
+    html {
+        background-color: #1867c0;
     }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) { 
+    .Password {
+        min-height: 1400px;
+    }
+}
 </style>

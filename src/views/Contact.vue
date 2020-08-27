@@ -103,5 +103,16 @@ ul > li {
       font-size: 1.8em;
     }
   }
+  @media (min-width: 1920px) and (max-width: 2560px) {
+    &__pitchContainer {
+      min-height: 1300px;
+    }
+    li {
+      font-size: 3em;
+      &:first-of-type {
+        margin-top: 3%;
+      }
+    }
+  }
 }
 </style>

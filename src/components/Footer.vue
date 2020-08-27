@@ -204,6 +204,9 @@ export default {
             margin-left: 16%;
             right: unset;
         }
+        &__pitchContainer {
+            min-height: 1250px;
+        }
     }
 }
 </style>
