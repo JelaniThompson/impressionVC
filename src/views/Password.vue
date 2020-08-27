@@ -23,8 +23,8 @@ export default {
     methods: {
         passwordRedirect() {
             console.log('triggered');
-            if(document.getElementById('passwordForm').value === 'ILikeMoney') {
-                window.location.href = "https://drive.google.com/drive/folders/1UZPRwT-LPNBlcI3U2gFmPpisFDqrpn8p";
+            if(document.getElementById('passwordForm').value === 'globalwashbodywild') {
+                window.location.href = "https://drive.google.com/drive/folders/1hePgdKp2Nvr3bwwhYUWAZvcpNLA6C8_O";
             }
         }
     },

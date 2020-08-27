@@ -1,17 +1,19 @@
 <template>
   <div class="home">
     <!-- Implement cookie to check if user's first visit -->
-    <loading
-      :active.sync="pageLoading" 
-      :can-cancel="true" 
-      :on-cancel="onCancel"
-      :is-full-page="fullPage"
-      :opacity="1.0"
-      :transition="'transition: opacity .5s;'"
-      :color="'#1965BD'"
-      :background-color="'#000'"
-    >
-    </loading>
+    <transition name="fadeOut">
+      <loading
+        :active.sync="pageLoading" 
+        :can-cancel="true" 
+        :on-cancel="onCancel"
+        :is-full-page="fullPage"
+        :opacity="1.0"
+        :transition="'fadeOut'"
+        :color="'#1965BD'"
+        :background-color="'#000'"
+      >
+      </loading>
+    </transition>
     <Header />
       <template v-if="isFetching == false" v-cloak>
       <div class="home__textContainer">  
@@ -344,6 +346,13 @@ export default {
 
 [v-cloak].home__text {
   display: none;
+}
+
+.fadeOut-enter-active, .fadeOut-leave-active {
+  transition: opacity .5s;
+}
+.fadeOut-enter, .fadeOut-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 .vue-typer {
@@ -1019,6 +1028,29 @@ export default {
     &__text {
       width: 78%;
       font-size: 2.5em;
+    }
+  }
+  @media (min-width: 1920px) and (max-width: 2560px) {
+    &__blackTextBlockTextContainer {
+      min-height: 1500px;
+      display: flex;
+      justify-content: center;
+    }
+    &__sliderContainer {
+      min-height: 800px;
+    }
+    &__featuredTitle {
+      margin-left: 30%;
+      font-size: 3.5em;
+    }
+    &__storyLink {
+      max-width: 1488px;
+      margin-right: 30%;
+      align-items: center;
+      align-content: center;
+    }
+    &__newsTitle {
+      padding-bottom: 2%;
     }
   }
 }

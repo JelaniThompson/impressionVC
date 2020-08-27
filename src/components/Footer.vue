@@ -198,5 +198,12 @@ export default {
     @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
         display: none;
     }
+    @media (min-width: 1920px) and (max-width: 2560px) {
+        &__bottomRow {
+            justify-content: flex-end;
+            margin-left: 16%;
+            right: unset;
+        }
+    }
 }
 </style>
