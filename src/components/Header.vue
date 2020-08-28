@@ -61,16 +61,6 @@ a {
     display: block;
     list-style: none;
 }
-
-header {
-&__burger {
-    .bm-burger-bars {
-        color: #fff;
-        z-index: 99;
-    }
-}
-}
-
 .header {
     display: flex;
     align-items: center;
@@ -104,6 +94,11 @@ header {
         padding: 18px;
         border-radius: 4px;
         font-weight: 600;
+    }
+
+    .bm-burger-bars {
+        background-color: #fff;
+        z-index: 99;
     }
 
     @media (max-width: 359px) {
