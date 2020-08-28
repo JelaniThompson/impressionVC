@@ -71,6 +71,7 @@ html {
     width: 100%;
     height: 100%;
     min-height: 600px;
+    margin-top: 108px;
 }
 
 @media (max-width: 991.98px) {

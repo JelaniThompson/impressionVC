@@ -51,6 +51,7 @@ ul > li {
 }
 .Contact {
   &__pitchContainer {
+    margin-top: 108px;
     padding: 50px 181px 50px 181px;
   }
   &__subList {

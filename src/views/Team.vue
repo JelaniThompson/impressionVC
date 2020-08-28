@@ -2,12 +2,12 @@
   <div class="Team">
       <Header/>
       <div class="Team__teamContainer">
-        <div class="Team__titleContainer">
-          <h1 class="Team__headerTitle">Who We Are</h1>
-        </div>
         
           <!-- Team List -->
           <div class="Team__coreTeamDisplayContainer">
+                    <div class="Team__titleContainer">
+          <h1 class="Team__headerTitle">Who We Are</h1>
+        </div>
             <div class="Team__coreTeamDisplayItem" v-for="(item, index) in coreArray" :key="index">
               <div class="Team__ItemAlignContainer">
                 <div class="Team__overlay">
@@ -121,7 +121,7 @@ export default {
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 5%;
-    margin-top: 90px;
+    margin-top: 108px;
   }
   &__coreTeamDisplayHeadshot {
     min-width: 240px;
