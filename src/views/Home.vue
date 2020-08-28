@@ -145,9 +145,9 @@
             <div v-for="(item, index) in testimonialsArray" :key="index" class="slide"> 
               <!-- home__testimonialsSlider ^ above -->
               <div class="home__contentContainer">
-                <div class="home__textContainer">
-                <div class="home__sliderQuote">{{ item.fields.quote }}</div>
-                <div class="home__sliderTeam">{{ item.fields.name }}</div>
+                <div class="home__quoteTextContainer">
+                  <div class="home__sliderQuote">{{ item.fields.quote }}<br/><br/><b>{{ item.fields.name }}</b></div>
+                  <!-- <div class="home__sliderTeam">{{ item.fields.name }}</div> -->
               </div>
               <img :src="item.fields.image.fields.file.url" alt="Impression Ventures Slider Image" class="home__sliderImage">
             </div>
@@ -670,10 +670,12 @@ export default {
     object-fit: cover;
   }
   &__textContainer {
+    margin-top: 108px;
     flex-direction: column;
   }
   &__sliderTeam {
     align-self: flex-start;
+    text-align: left;
     margin-top: 5%;
     font-weight: bold;
     font-size: 32px;
@@ -701,7 +703,7 @@ export default {
     margin-top: 175px;
     margin-left: 123px;
     position: absolute;
-    z-index: 99;
+    z-index: 98;
     left: 0;
   }
   &__newsStoryTitle {
@@ -902,7 +904,7 @@ export default {
       padding: 0 6% 0 6%;
       margin-top: 8%;
       margin-left: 0 !important;
-      word-break: break-all;
+      word-break: break-word;
     }
     &__sliderTeam {
       margin-left: auto !important;

@@ -67,6 +67,8 @@ a {
     justify-content: flex-end;
     font-family: 'Montserrat', sans-serif;
     max-height: 90px;
+    z-index: 99;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
@@ -104,6 +106,10 @@ a {
       .bm-menu {
           background-color: #000;
       }
+      .bm-burger-button {
+          top: 0;
+          position: relative;
+      }
     }
     @media (max-width: 359px) {
         .bm-burger-button {
@@ -112,7 +118,7 @@ a {
         }
 
         &__logo {
-            margin-right: 40%;
+            margin-right: 30%;
             // width: 100px;
             width: 187px !important;
         }
