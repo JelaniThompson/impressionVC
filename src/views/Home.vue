@@ -564,6 +564,7 @@ export default {
   &__fundFilter {
     display: inline-flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     max-width: 499px;
     width: 100%;
     white-space: nowrap;
