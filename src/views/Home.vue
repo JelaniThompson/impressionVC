@@ -648,7 +648,7 @@ export default {
   }
   &__contentContainer {
     display: inline-flex;
-    margin-top: 5%;
+    margin-top: 8%;
   }
   &__testimonialsTitle {
     margin-top: 117px;

@@ -121,7 +121,7 @@ export default {
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 5%;
-    margin-top: 108px;
+    margin-top: 118px;
   }
   &__coreTeamDisplayHeadshot {
     min-width: 240px;
