@@ -97,7 +97,7 @@ a {
     }
 
     .bm-burger-bars {
-        background-color: #fff;
+        background-color: #fff !important;
         z-index: 99;
     }
 
