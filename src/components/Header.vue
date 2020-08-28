@@ -96,11 +96,12 @@ a {
         font-weight: 600;
     }
 
-    .bm-burger-bars {
+    &__burger {
+      .bm-burger-bars {
         background-color: #fff !important;
         z-index: 99;
+      }
     }
-
     @media (max-width: 359px) {
         .bm-burger-button {
             position: relative !important;
