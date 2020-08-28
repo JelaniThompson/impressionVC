@@ -104,7 +104,7 @@
           <h1 class="home__portfolioTitle">Portfolio</h1>
           <div class="home__fundFilter">
             <!-- Use a guard expression for conditional rendering -->
-            <div class="home__fundItem home__all" @click="showAll()">All |</div>
+            <div class="home__fundItem home__all" @click="showAll()">All</div>
             <div
               v-for="(item, index) in fundList"
               class="home__fundListing home__fundItem"
@@ -112,7 +112,7 @@
               @click="updateFund(index + 1)"
               :key="item"
             >
-            &nbsp; Fund {{ item }} | &nbsp;
+            &nbsp; Fund {{ item }} &nbsp;
             </div>
             <div class="home__fundItem home__exits" @click="getExitedCompany()">Exits</div>
           </div>
@@ -574,8 +574,11 @@ export default {
     font-size: 32px;
     font-weight: 500;
     line-height: 39px;
-    // margin-left: 1.5%;
-    padding: 0 1.5% 0 1.5%;
+    border-right: 3px solid #2c3e50;
+    padding: 0 3% 0 3%;
+    &:last-child {
+      border-right: none;
+    }
     &:hover {
       cursor: pointer;
     }
