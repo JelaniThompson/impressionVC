@@ -15,17 +15,36 @@
 </template>
 
 <script>
+import { client } from '../contentfulConfig.js'
+
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
     name: 'Password',
+    data() {
+        return {
+            password: null,
+        }
+    },
+    beforeMount() {
+        this.getCurrentPassword();
+    },
     methods: {
         passwordRedirect() {
             console.log('triggered');
-            if(document.getElementById('passwordForm').value === 'globalwashbodywild') {
+            if(document.getElementById('passwordForm').value === this.password) {
                 window.location.href = "https://drive.google.com/drive/folders/1hePgdKp2Nvr3bwwhYUWAZvcpNLA6C8_O";
             }
+        },
+        getCurrentPassword() {
+          client.getEntries({ order: 'sys.createdAt'}).then(entries => {
+            entries.items.forEach(entry => {
+              if(entry.fields.password) {
+                this.password = entry.fields.password;
+              }
+            })
+          });
         }
     },
     components: {

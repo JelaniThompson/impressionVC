@@ -15,7 +15,8 @@ Vue.use(VueSplash)
   {
     path: '/team',
     name: 'Team',
-    component: () => import('../views/Team.vue')
+    component: () => import('../views/Team.vue'),
+    meta: { transition: 'zoom' },
   },
   {
     path: '/contact',
