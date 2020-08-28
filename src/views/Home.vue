@@ -169,7 +169,7 @@
               <div class="home__storyLink">
                 <h3 class="home__newsDate">{{ item.fields.date }}</h3>
                 <h1 class="home__newsStoryTitle">{{ item.fields.title }}</h1>
-                <p class="home__readMore"><a :href="item.fields.link" target="_blank">Read More</a><img class="home__rightArrow" src="../assets/images/arrow-right.png" alt="Right Arrow"/></p>
+                <p class="home__readMore"><a :href="item.fields.link" target="_blank">Read More</a></p>
               </div>
             </div>
           </div>
@@ -745,6 +745,7 @@ export default {
     font-size: 18px;
     border-bottom: 1px solid #000;
     margin-top: 1.5%;
+    padding-bottom: 2%;
   }
 
   &__readMore > a {
