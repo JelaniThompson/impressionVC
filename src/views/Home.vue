@@ -830,7 +830,7 @@ export default {
       width: 90%;
     }
     &__fundItem {
-      font-size: 24px;
+      font-size: 1em;
     }
     &__portfolioImageContainer > &__portfolioImage {
       width: 70px !important;
@@ -869,7 +869,7 @@ export default {
       justify-content: space-evenly;
     }
     &__fundItem {
-      font-size: 1.3em;
+      font-size: 1em;
     }
     &__text {
       font-size: 1em !important;
