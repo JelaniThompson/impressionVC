@@ -114,7 +114,7 @@
             >
             &nbsp; Fund {{ item }} | &nbsp;
             </div>
-            <div class="home__fundItem home__exits">Exits</div>
+            <div class="home__fundItem home__exits" @click="getExitedCompany()">Exits</div>
           </div>
       </template>
 
@@ -336,6 +336,16 @@ export default {
           if (entry.fields.fundNumber == 1 || entry.fields.fundNumber == 2 || entry.fields.fundNumber == 3 || entry.fields.fundNumber == 4) {
             this.selectedFundArray.push(entry);
             }
+        });
+      });
+    },
+    getExitedCompany() {
+      this.selectedFundArray = [];
+      client.getEntries().then(entries => {
+        entries.items.forEach(entry => {
+          if (entry.fields.isExited) {
+            this.selectedFundArray.push(entry);
+          }
         });
       });
     },
