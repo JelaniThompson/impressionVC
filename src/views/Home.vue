@@ -829,9 +829,9 @@ export default {
       width: 250px !important;
       height: 250px !important;
     }
-    &__fundFilter {
-      width: 90%;
-    }
+    // &__fundFilter {
+    //   width: 90%;
+    // }
     &__fundItem {
       font-size: 1em;
     }
