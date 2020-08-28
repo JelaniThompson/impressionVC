@@ -818,7 +818,7 @@ export default {
     }
     &__fundItem {
       font-size: 0.9em !important;
-      padding: 0 1.5% 0 0.5% !important;
+      // padding: 0 1.5% 0 0.5% !important;
     }
   }
   
