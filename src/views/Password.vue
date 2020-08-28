@@ -25,6 +25,7 @@ export default {
     data() {
         return {
             password: null,
+            url: null
         }
     },
     beforeMount() {
@@ -34,7 +35,7 @@ export default {
         passwordRedirect() {
             console.log('triggered');
             if(document.getElementById('passwordForm').value === this.password) {
-                window.location.href = "https://drive.google.com/drive/folders/1hePgdKp2Nvr3bwwhYUWAZvcpNLA6C8_O";
+                window.location.href = this.url;
             }
         },
         getCurrentPassword() {
@@ -42,6 +43,7 @@ export default {
             entries.items.forEach(entry => {
               if(entry.fields.password) {
                 this.password = entry.fields.password;
+                this.url = entry.fields.url;
               }
             })
           });
